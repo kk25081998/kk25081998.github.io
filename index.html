@@ -79,6 +79,19 @@
         .skills-column {
             width: 48%; /* To leave a small gap in the middle */
         }
+        .combined-section {
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        .judging-section {
+            flex: 62%;
+            margin-right: 3%;
+        }
+    
+        .memberships-section {
+            flex: 35%;
+        }
     </style>
 </head>
 
@@ -147,7 +160,6 @@
                         <li>Effective Customer Management</li>
                         <li>Clear Communication</li>
                     </ul>
-                    <hr>
         
                 </div>
             </div>
@@ -197,18 +209,7 @@
             <li>Constructed a React-based web app, facilitating the exploration of over 10,000 movies from the IMDB database, and incorporated personalized watchlists and AI-driven recommendations tailored to user preferences.</li>
             <li>Achieved top marks in class for the project's innovation and execution.</li>
         </ul>
-    </section>
-
-    <section>
-        <h2>Memberships</h2>
-        <ul>
-            <li>Member of <strong>Leaders Excellence at Harvard Square</strong></li>
-            <li>Member of <strong>Global CTO Forum</strong></li>
-            <li>SAS Eminent Fellow of <strong>Scholars Academic and Scientific Society</strong></li>
-            <li>Dignitary Fellow</strong> of <strong>International Organization for Academic and Scientific Development (IOASD)</strong></li>
-        </ul>
-    </section>
-
+    </section>  
 
     <section>
         <h2>Publications & Academic Contributions</h2>
@@ -226,24 +227,29 @@
         </ul>
     </section>
 
-    <section>
-        <h2>Judging & Awards</h2>
-            
-        <h3>Information Technology World Awards</a></h3>
-        <h4><a href="https://globeeawards.com/kartik-khosa/" target="_blank">Globee Awards </a></h4>
+    <div class="combined-section">
 
-        <p>Acted as a judge for the 18th Annual 2023 Information Technology World Awards. Evaluated and scored nominations from global tech leaders and innovators. Witnessed a plethora of talented leaders and groundbreaking ideas that shape the IT industry.</p>
-
-
-        <h3>Community and Travel Grants Committee Member</h3>
-        <h4><strong><a href="https://us-rse.org/grants-and-awards/">US-RSE</a></strong></h4>
-            <ul>
-        <li>Reviewing grant applications based on criteria like potential community impact, support for diversity and inclusion, and budget appropriateness.</li>
-        <li>Collaboratively ranking and selecting applicants for the grants, ensuring transparency and fairness in the process.</li>
-        <li>Promoting and upholding the values of fostering a diverse, equitable, and inclusive community within US-RSE.</li>
-    </ul>
+        <!-- Judging Section -->
+        <section class="judging-section">
+            <h2>Judging</h2>
+            <h3>Information Technology World Awards</h3>
+            <h4><a href="https://globeeawards.com/kartik-khosa/" target="_blank">Globee Awards </a></h4>
+            <p>Acted as a judge for the 18th Annual 2023 Information Technology World Awards. Evaluated and scored nominations from global tech leaders and innovators. Witnessed a plethora of talented leaders and groundbreaking ideas that shape the IT industry.</p>
+            <h3>Community and Travel Grants Committee</h3>
+            <h4><strong><a href="https://us-rse.org/grants-and-awards/">US-RSE</a></strong></h4>
+            <p>Reviewing grant applications based on criteria like potential community impact, support for diversity and inclusion, and budget appropriateness. Collaboratively ranking and selecting applicants for the grants, ensuring transparency and fairness in the process. Promoting and upholding the values of fostering a diverse, equitable, and inclusive community within US-RSE.</p>
+        </section>
     
-    </section>
+        <!-- Memberships Section -->
+        <section class="memberships-section">
+            <h2>Memberships</h2>
+            <p>Member of <strong>Leaders Excellence at Harvard Square</strong></p>
+            <p>Member of <strong>Global CTO Forum</strong></p>
+            <p>SAS Eminent Fellow of <strong>Scholars Academic and Scientific Society</strong></p>
+            <p>Dignitary Fellow of <strong>International Organization for Academic and Scientific Development (IOASD)</strong></p>
+        </section>
+    
+    </div>
 
     
 
