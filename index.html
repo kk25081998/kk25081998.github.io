@@ -15,7 +15,7 @@
         header {
             text-align: center;
             padding: 20px;
-            background-color: #4CAF50;
+            background-color: #50b954;
             color: white;
         }
 
@@ -34,6 +34,51 @@
             text-align: center;
             margin-top: 30px;
         }
+        .skills-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .skills-content {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .skills-column {
+            width: 48%; /* To leave a small gap in the middle */
+        }
+        .skills-list > li {
+            margin-bottom: 10px;
+        }
+    
+        hr {
+            margin: 20px 0;
+            border: 0;
+            border-top: 1px solid #ddd;
+        }
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .flex-container > section.education {
+            flex-basis: 35%;
+            box-sizing: border-box;
+        }
+        
+        .flex-container > section.skills {
+            flex-basis: 63%; /* Taking the remaining space minus 2% for potential margin */
+            box-sizing: border-box;
+        }
+        
+        .skills-content {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .skills-column {
+            width: 48%; /* To leave a small gap in the middle */
+        }
     </style>
 </head>
 
@@ -43,19 +88,72 @@
         <p><a href="https://www.linkedin.com/in/kartikkhosa/" target="_blank">LinkedIn</a> | kartik.khosa@gmail.com | 814 862 8541 | McLean, VA</p>
     </header>
 
-    <section>
-        <h2>Education</h2>
-        <h3>University of Pennsylvania</h3>
-        <p>Master’s in Computer and Information Technology, Graduating: May 2024</p>
-        <h3>Pennsylvania State University, University Park, PA, USA</h3>
-        <p>Honors Bachelor’s in Science Mechanical Engineering with magna cum laude, Graduated: December 2019</p>
-        <p><strong>Thesis:</strong> Developing a framework for uncertainty quantification of a chemical kinetic parameter in MOCVDS</p>
-        <ul>
-            <li>Utilized orthogonal sampling and stepwise regression in MATLAB to optimize simulation efficiency by 85%.</li>
-            <li>Conducted sensitivity analysis and Monte Carlo simulations to accurately determine yield ranges of a nanomaterial.</li>
-        </ul>
-    </section>
+    <div class="flex-container">
+        <section class="education">
+            <h2>Education</h2>
+        
+            <h3><img src="upenn.png" alt="UPenn Logo" width="15px"/> University of Pennsylvania</h3>
+    
+            <p>Anticipated Master’s in Computer and Information Technology - May 2024</p>
+        
+            <h3> <img src="psu.jpeg" alt="PSU Logo" width="15px"> Pennsylvania State University</h3>
+            <p>Honors B.S. in Mechanical Engineering, magna cum laude - December 2019</p>
+            <p><strong>Thesis:</strong> Framework for Uncertainty Quantification of a Chemical Kinetic Parameter in MOCVDS</p>
+            <ul>
+                <li>Optimized simulation efficiency by 85% using orthogonal sampling and stepwise regression in MATLAB.</li>
+                <li>Determined accurate yield ranges of a nanomaterial via sensitivity analysis and Monte Carlo simulations.</li>
+            </ul>
+        </section>    
+    
+        <section class="skills">
+            <h2>Skills</h2>
+            <div class="skills-content">
+                <div class="skills-column">
+                    <!-- Half of the skills content goes here ... -->
+                    <h3>Programming Languages</h3>
+                    <ul class="skills-list">
+                        <li><strong>Expert:</strong> Python, Java, JavaScript, CSS, HTML</li>
+                        <li><strong>Proficient:</strong> C, SAIL, LC4 Assembly, MATLAB</li>
+                    </ul>
+                    <hr>
+                    
+                    <h3>Databases</h3>
+                    <ul class="skills-list">
+                        <li><strong>Relational:</strong> MySQL, MariaDB, Amazon RDS, Oracle</li>
+                        <li><strong>NoSQL:</strong> MongoDB, Neo4j</li>
+                    </ul>
+                    <hr>
 
+                    <h3>Spoken Languages</h3>
+                    <ul class="skills-list">
+                        <li><strong>Expert:</strong> English, Hindi (Native), Kashmiri (Native)</li>
+                        <li><strong>Conversational:</strong> Mandarin</li>
+                    </ul>
+                </div>
+    
+                <div class="skills-column">
+                    <!-- The other half of the skills content goes here ... -->
+                    <h3>Advanced Tools, Platforms & Libraries</h3>
+                    <ul class="skills-list">
+                        <li><strong>Version Control & Project Management:</strong> Git, JIRA, Confluence</li>
+                        <li><strong>Cloud Platforms:</strong> AWS, GCP</li>
+                        <li><strong>Machine Learning & Big Data:</strong> Scikit-learn, TensorFlow, Keras, PyTorch, Spark, NLTK, Seaborn</li>
+                    </ul>
+                    <hr>
+        
+                    <h3>Leadership & Soft Skills</h3>
+                    <ul class="skills-list">
+                        <li>Strategic Research</li>
+                        <li>Effective Customer Management</li>
+                        <li>Clear Communication</li>
+                    </ul>
+                    <hr>
+        
+                </div>
+            </div>
+        </section>
+    </div>    
+    
     <section>
         <h2>Work Experience</h2>
         <h3>Phoenix Bioinformatics, Remote, US</h3>
@@ -83,13 +181,13 @@
     <section>
         <h2>Personal Projects</h2>
 
-        <h3>Flourish at Work Web Platform</h3>
+        <h3><a href="https://flourishatwork.xyz" target="_blank">Flourish at Work Web Platform</a></h3>
         <ul>
             <li>Architected and launched a mental well-being platform with intuitive UX/UI and scalable backend solutions using Python/Flask, HTML, CSS, JavaScript, and jQuery.</li>
-            <li>Delivered standout features such as self-assessments and a resource library, recognized by Techstars for its innovation.</li>
+            <li>Delivered standout features such as self-assessments and a resource library; currently in the second interview for potential inclusion in the Techstars accelerator program in Atlanta.</li>
         </ul>
 
-        <h3>InfiniLearn AI</h3>
+        <h3><a href="https://github.com/kk25081998/StudyPlanGen" target="_blank">InfiniLearn AI</a></h3>
         <ul>
             <li>Designed and developed an AI-driven Learning platform with adaptive, user-centric educational trajectories using Python/Flask, HTML, CSS, OpenAI API and JavaScript.</li>
         </ul>
@@ -113,34 +211,41 @@
 
 
     <section>
-        <h2>Skills</h2>
-
-        <h3>Programming Languages</h3>
-        <p>Expert: Python, Java, JavaScript, CSS, HTML</p>
-        <p>Proficient: C, SAIL, LC4 Assembly, MATLAB</p>
-
-        <h3>Databases</h3>
-        <p>Relational: MySQL, MariaDB, Amazon RDS, Oracle</p>
-        <p>NoSQL: MongoDB, Neo4j</p>
-
-        <h3>Advanced Tools, Platforms & Libraries</h3>
+        <h2>Publications & Academic Contributions</h2>
+        
+        <h3>Articles</h3>
+        <p>I actively write for <a href="https://hackernoon.com/u/kartikkhosa" target="_blank">HackerNoon</a>. Here are some of my notable contributions:</p>
         <ul>
-            <li>Version Control & Project Management: GitHub, JIRA</li>
-            <li>Cloud Platforms: AWS, GCP</li>
-            <li>Machine Learning & Big Data: Scikit-learn, TensorFlow, Keras, PyTorch, Spark, NLTK, Seaborn</li>
+            <li><a href="https://hackernoon.com/unlocking-endless-possibilities-with-gpt-4-my-journey-from-study-plans-to-a-multitude-of-apps" target="_blank">Unlocking Endless Possibilities with GPT-4: My Journey from Study Plans to a Multitude of Apps</a> - Trended for 2+ weeks and reached the number 4 spot.</li>
+            <li><a href="https://hackernoon.com/ais-new-apex-chatgpt-enterprise-vs-the-startup-spirit" target="_blank">AI's New Apex: ChatGPT Enterprise vs. The Startup Spirit</a> - My latest article discussing the enterprise and startup dynamics of AI.</li>
         </ul>
-
-        <h3>Leadership & Soft Skills</h3>
+        
+        <h3>Academic</h3>
         <ul>
-            <li>Strategic Research</li>
-            <li>Effective Customer Management</li>
-            <li>Clear Communication</li>
+            <li><a href="https://honors.libraries.psu.edu/files/final_submissions/6102" target="_blank">Developing a framework for uncertainty quantification of a chemical kinetic parameter in MOCVDS</a> - A research-intensive exploration during my undergraduate studies at Pennsylvania State University.</li>
         </ul>
-
-        <h3>Spoken Languages</h3>
-        <p>Expert: English, Hindi (Native), Kashmiri (Native)</p>
-        <p>Conversational: Mandarin</p>
     </section>
+
+    <section>
+        <h2>Judging & Awards</h2>
+            
+        <h3>Information Technology World Awards</a></h3>
+        <h4><a href="https://globeeawards.com/kartik-khosa/" target="_blank">Globee Awards </a></h4>
+
+        <p>Acted as a judge for the 18th Annual 2023 Information Technology World Awards. Evaluated and scored nominations from global tech leaders and innovators. Witnessed a plethora of talented leaders and groundbreaking ideas that shape the IT industry.</p>
+
+
+        <h3>Community and Travel Grants Committee Member</h3>
+        <h4><strong><a href="https://us-rse.org/grants-and-awards/">US-RSE</a></strong></h4>
+            <ul>
+        <li>Reviewing grant applications based on criteria like potential community impact, support for diversity and inclusion, and budget appropriateness.</li>
+        <li>Collaboratively ranking and selecting applicants for the grants, ensuring transparency and fairness in the process.</li>
+        <li>Promoting and upholding the values of fostering a diverse, equitable, and inclusive community within US-RSE.</li>
+    </ul>
+    
+    </section>
+
+    
 
     <footer>
         <p>© 2023 Kartik Khosa. All rights reserved.</p>
