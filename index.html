@@ -107,16 +107,26 @@
         .combined-section {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap; /* Allows items to wrap onto the next line if there's not enough space */
         }
-    
+        
         .judging-section {
-            flex: 62%;
-            margin-right: 3%;
+            flex: 1; /* Allows this section to grow and take up available space */
+            margin-right: 2%; /* Some space between sections */
+            box-sizing: border-box; /* Includes padding and border in the total width */
         }
-    
+        
         .memberships-section {
-            flex: 35%;
+            flex-basis: 35%; /* This can be adjusted based on your preference */
+            box-sizing: border-box; /* Includes padding and border in the total width */
         }
+        
+        @media (max-width: 767px) {
+            .judging-section, .memberships-section {
+                flex-basis: 100%;
+                margin-right: 0;
+            }
+        }        
 
         ul {
             padding-left: 15px;  /* Adjust this value to move the bullets to the left */
