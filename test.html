@@ -6,6 +6,7 @@
     <title>Kartik Khosa - Innovative Full Stack Engineer</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         :root {
             --primary-color: #2c3e50;
@@ -15,20 +16,20 @@
             --background-color: #1a1a1a;
             --card-bg-color: rgba(52, 152, 219, 0.1);
         }
-
+    
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+    
         body {
             font-family: 'Roboto', sans-serif;
             background-color: var(--background-color);
             color: var(--text-color);
             overflow-x: hidden;
         }
-
+    
         #canvas-container {
             position: fixed;
             top: 0;
@@ -37,103 +38,589 @@
             height: 100vh;
             z-index: -1;
         }
-
+    
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-
+    
         header {
             padding: 2rem 0;
             text-align: center;
         }
-
+    
         h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
             color: var(--secondary-color);
         }
-
+    
         section {
             padding: 4rem 0;
             margin: 2rem 0;
             background-color: rgba(26, 26, 26, 0.8);
             border-radius: 10px;
             backdrop-filter: blur(10px);
-            opacity: 0; /* Hidden initially */
-            transform: translateY(50px); /* Start position for scroll animation */
         }
-
+    
         h2 {
             font-size: 2.5rem;
             margin-bottom: 2rem;
             color: var(--secondary-color);
         }
-
+    
         p, ul {
             margin-bottom: 1rem;
             line-height: 1.6;
         }
-
+    
         ul {
             list-style-type: disc;
             padding-left: 1.5rem;
         }
-
+    
         a {
             color: var(--accent-color);
             text-decoration: none;
         }
-
+    
         a:hover {
             text-decoration: underline;
         }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+    
+        .social-icons a {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            transition: color 0.3s ease;
+        }
+    
+        .social-icons a:hover {
+            color: var(--accent-color);
+        }
+    
+        /* About Section Styles */
+        #about {
+            padding: 4rem 0;
+        }
+    
+        .about-content {
+            display: flex;
+            align-items: center;
             gap: 2rem;
         }
-
-        .skill-card {
-            background-color: var(--card-bg-color);
-            padding: 1.5rem;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
+    
+        .about-text {
+            flex: 2;
         }
-
-        .skill-card:hover {
-            transform: translateY(-5px);
+    
+        .about-image {
+            flex: 1;
         }
-
-        .experience-item, .project-item {
+    
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    
+        #about ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+    
+        #about li {
+            margin-bottom: 0.5rem;
+        }
+    
+        #about li i {
+            margin-right: 0.5rem;
+            color: var(--secondary-color);
+        }
+    
+        /* Skills Section Styles */
+        #skills {
+            padding: 4rem 0;
+        }
+    
+        #skills h2 {
+            text-align: center;
             margin-bottom: 2rem;
-            padding: 1.5rem;
+        }
+    
+        .skills-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+    
+        .skill-category {
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
             background-color: var(--card-bg-color);
-            border-radius: 8px;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
             transition: transform 0.3s ease;
         }
-
-        .experience-item:hover, .project-item:hover {
+    
+        .skill-category:hover {
             transform: translateY(-5px);
         }
-
+    
+        .skill-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+    
+        .skill-category h3 {
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+    
+        .skill-category ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+        }
+    
+        .skill-category li {
+            margin-bottom: 0.5rem;
+            color: #bdc3c7;
+        }
+    
+        /* Experience Section Styles */
+        #experience {
+            padding: 4rem 0;
+        }
+    
+        .experience-item {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: var(--card-bg-color);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+    
+        .experience-item:hover {
+            transform: translateY(-5px);
+        }
+    
+        .company-logo {
+            flex-shrink: 0;
+        }
+    
+        .company-logo img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+    
+        .content {
+            flex: 1;
+        }
+    
+        .content h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+    
+        .content h4 {
+            color: var(--text-color);
+            margin-bottom: 1rem;
+            font-weight: normal;
+        }
+    
+        .content ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+    
+        .content li {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+    
+        /* Project Section Styles */
+        .project-item {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--card-bg-color);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+    
+        .project-item:hover {
+            transform: translateY(-5px);
+        }
+    
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+    
+        .project-content {
+            padding: 1.5rem;
+        }
+    
+        /* Footer Styles */
         footer {
             text-align: center;
             padding: 2rem 0;
             background-color: var(--primary-color);
         }
 
+        .company-logo {
+            flex-shrink: 0;
+            background-color: white;
+            border-radius: 0px;
+            padding: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 120px;
+            height: 120px;
+        }
+
+        .company-logo img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            border-radius: 0;
+        }
+
+        .company-logo.appian {
+            background-color: #201AA3;
+        }
+
+        .company-logo.phx {
+            padding-bottom: 10px;
+        }
+    
+        /* Responsive Design */
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
             }
-
+    
             h2 {
                 font-size: 1.8rem;
             }
+    
+            .about-content,
+            .experience-item {
+                flex-direction: column;
+            }
+    
+            .about-image {
+                order: -1;
+                margin-bottom: 1rem;
+            }
+    
+            .skills-container {
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            .skill-category {
+                width: 100%;
+            }
         }
+
+        #projects {
+            padding: 4rem 0;
+        }
+
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-item {
+            background-color: var(--card-bg-color);
+            border-radius: 10px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .project-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .project-content h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .project-content p {
+            margin-bottom: 1rem;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .project-tech span {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            padding: 0.25rem 0.5rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 768px) {
+            .projects-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        #publications {
+            padding: 4rem 0;
+        }
+
+        .publications-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .publication-category {
+            background-color: var(--card-bg-color);
+            border-radius: 10px;
+            padding: 2rem;
+        }
+
+        .publication-category h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .publication-category h3 i {
+            margin-right: 0.5rem;
+        }
+
+        .publication-item {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .publication-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .publication-item h4 {
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-item p {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .impact-metrics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .impact-metrics span {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            padding: 0.25rem 0.5rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .impact-metrics span i {
+            margin-right: 0.3rem;
+        }
+
+        .publication-link {
+            display: inline-block;
+            margin-top: 0.5rem;
+            padding: 0.5rem 1rem;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .publication-link:hover {
+            background-color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .publications-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        #judging {
+            padding: 4rem 0;
+        }
+
+        .judging-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .judging-item {
+            background-color: var(--card-bg-color);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .judging-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .judging-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .judging-item h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .judging-item h4 {
+            color: var(--text-color);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            font-weight: normal;
+        }
+
+        .judging-item p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .bottom-row {
+            grid-column: span 3;
+        }
+
+        .judging-grid::after {
+            content: "";
+            display: block;
+            grid-column: span 3;
+        }
+
+        @media (min-width: 769px) {
+            .bottom-row {
+                width: calc(66.67% - 1rem);
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .judging-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .bottom-row {
+                grid-column: auto;
+                width: 100%;
+            }
+        }
+
+        #memberships {
+            padding: 4rem 0;
+        }
+
+        .memberships-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .membership-item {
+            background-color: var(--card-bg-color);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .membership-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .membership-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .membership-item h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .membership-item p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        @media (max-width: 768px) {
+            .memberships-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -142,31 +629,58 @@
     <header>
         <div class="container">
             <h1>Kartik Khosa</h1>
-            <p>Innovative Full Stack Engineer & Data Scientist</p>
-            <p><a href="https://www.linkedin.com/in/kartikkhosa/" target="_blank">LinkedIn</a> | kartik.khosa@gmail.com | 814 862 8541 | McLean, VA</p>
+            <p>Full Stack Engineer & Data Enthusiast</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/kartikkhosa/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/kartikkhosa/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/kartikkhosa" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:kartik.khosa@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="tel:8148628541"><i class="fas fa-phone"></i></a>
+            </div>
         </div>
     </header>
 
     <main class="container">
         <section id="about">
             <h2>About Me</h2>
-            <p>As a proficient Full Stack Software Engineer, I bring a wealth of experience in both backend (Java, Python, Node.js) and frontend (Vue.js, React, HTML/CSS) development. My journey has led me to optimize systems and enhance UI at Phoenix Bioinformatics, as well as deliver innovative, client-focused solutions at Appian Corporation. I thrive on solving complex problems and adapting to diverse technological landscapes.</p>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hey there! I'm Kartik, a Full Stack Software Engineer with a passion for technology and adventure. When I'm not crafting code or solving complex problems, you'll find me pursuing a variety of exciting interests:</p>
+                    <ul>
+                        <li><i class="fas fa-flag-checkered"></i> Formula 1 enthusiast - I never miss a race weekend!</li>
+                        <li><i class="fas fa-parachute-box"></i> Adrenaline junkie - I've experienced the thrill of skydiving and scuba diving in Spain.</li>
+                        <li><i class="fas fa-gamepad"></i> Competitive gamer - I enjoy sharpening my skills in Valorant</li>
+                        <li><i class="fas fa-utensils"></i> Foodie adventurer - Always on the hunt for new culinary experiences</li>
+                        <li><i class="fas fa-brain"></i> Lifelong learner - Constantly picking up new skills and knowledge</li>
+                    </ul>
+                    <p>I believe in bringing the same enthusiasm and curiosity I have for my hobbies into my professional life. Whether I'm optimizing systems, enhancing user interfaces, or delivering innovative solutions, I approach each challenge with excitement and a drive to excel.</p>
+                </div>
+                <div class="about-image">
+                    <img src="/Kartik.jpg" alt="Kartik enjoying an adventure">
+                </div>
+            </div>
         </section>
 
         <section id="skills">
             <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
+            <div class="skills-container">
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
                     <h3>Programming Languages</h3>
                     <ul>
                         <li>Java (SpringBoot, Maven)</li>
                         <li>Python (Django, Flask)</li>
                         <li>Node.js</li>
-                        <li>JavaScript (Vue.js, React)</li>
+                        <li>JavaScript (Vue.js, React, Next.js)</li>
                         <li>HTML5/CSS3</li>
                     </ul>
                 </div>
-                <div class="skill-card">
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
                     <h3>Databases</h3>
                     <ul>
                         <li>MySQL</li>
@@ -176,7 +690,10 @@
                         <li>AWS S3</li>
                     </ul>
                 </div>
-                <div class="skill-card">
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
                     <h3>Tools & Platforms</h3>
                     <ul>
                         <li>Git (Github/Gitlab)</li>
@@ -192,96 +709,199 @@
         <section id="experience">
             <h2>Work Experience</h2>
             <div class="experience-item">
-                <h3>Full Stack Software Engineer</h3>
-                <h4>Phoenix Bioinformatics | October 2022 – Present</h4>
-                <ul>
-                    <li>Developed an automated Java pipeline for arabidopsis.org, optimizing data retrieval times.</li>
-                    <li>Architected SpringBoot Java APIs for AWS SES email process automation.</li>
-                    <li>Created Vue.js dashboards, boosting user engagement by 40%.</li>
-                </ul>
+                <div class="company-logo phx">
+                    <img src="/phoenix-logo-300sm.png" alt="Phoenix Bioinformatics Logo">
+                </div>
+                <div class="content">
+                    <h3>Full Stack Software Engineer</h3>
+                    <h4>Phoenix Bioinformatics | October 2022 – Present</h4>
+                    <ul>
+                        <li>Developed an automated Java pipeline for the arabidopsis.org web app, transforming MySQL bioinformatics data into weekly updated S3-hosted JSON files. This innovation slashed data retrieval times from 3+ seconds to under 1 second per query, eliminating the need for 20+ queries per page.</li>
+                        <li>Architected and executed advanced SpringBoot Java APIs for automating AWS SES email processes, significantly boosting team efficiency by automating intricate workflows and saving over 20 hours per week.</li>
+                        <li>Developed intuitive Vue.js dashboards using advanced HTML/CSS, enhancing user engagement by 40% and reducing data processing time by 30%, thereby significantly improving data accessibility and user experience for stakeholders.</li>
+                        <li>Championed the effective application of existing Agile methodologies, enhancing project delivery speed by 20% and securing the on-time release of 95% of features with notable quality improvements.</li>
+                        <li>Modernized legacy projects, transitioning 3 applications to newer tech stacks while also leveraging Docker, resulting in a 50% improvement in scalability and system performance.</li>
+                        <li>Contributed to groundbreaking bioinformatics research published in May 2024 in <strong>GENETICS Journal - Impact Factor 3.3</strong>.</li>
+                    </ul>
+                </div>
             </div>
             <div class="experience-item">
-                <h3>Solution Engineer</h3>
-                <h4>Appian Corporation | February 2020 – October 2022</h4>
-                <ul>
-                    <li>Optimized 25+ custom Java plugins, ensuring alignment with company standards.</li>
-                    <li>Managed authentication protocols for 100+ Appian businesses.</li>
-                    <li>Authored knowledge base articles and training materials for global team members.</li>
-                </ul>
+                <div class="company-logo appian">
+                    <img src="/logo-appian-white-rebrand.svg" alt="Appian Corporation Logo">
+                </div>
+                <div class="content">
+                    <h3>Solution Engineer</h3>
+                    <h4>Appian Corporation | February 2020 – October 2022</h4>
+                    <ul>
+                        <li>Assessed and optimized 25+ custom Java plugins from customers, ensuring full alignment with company standards and requirements.</li>
+                        <li>Managed critical authentication protocols, including SAML, OAuth, and LDAP, fortifying security for over 100+ Appian businesses for 100K+ users, and ensuring seamless user experiences.</li>
+                        <li>Authored 5+ knowledge base articles, formulated and delivered training materials for 20+ global team members.</li>
+                        <li>Pioneered internal documentation on integrating Appian with Github/Gitlab, which expedited resolution times by 80% across 10+ customer cases, solidifying its role as an essential resource and elevating team efficiency.</li>
+                        <li>Collaborated in tandem with sales and product teams, providing insightful technical advice to ensure Appian solutions were precisely tailored to client requirements, resulting in an upward of 95% "Very Satisfied" rate from clients.</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
         <section id="projects">
             <h2>Personal Projects</h2>
-            <div class="project-item">
-                <h3>Flourish at Work Web Platform</h3>
-                <p>A mental well-being platform with intuitive UX/UI and scalable backend solutions using Python/Flask, HTML/CSS (Bootstrap), JavaScript, and jQuery.</p>
-            </div>
-            <div class="project-item">
-                <h3><a href="https://github.com/kk25081998/StudyPlanGen" target="_blank" style="color: var(--secondary-color);">InfiniLearn AI</a></h3>
-                <p>An AI-driven Learning platform with adaptive, user-centric educational trajectories using Python/Flask, HTML, CSS, OpenAI API, and JavaScript.</p>
-            </div>
-            <div class="project-item">
-                <h3>Celebrating Cinema Web App</h3>
-                <p>A React-based web app for exploring movies with personalized watchlists and AI-driven recommendations tailored to user preferences.</p>
+            <div class="projects-container">
+                <div class="project-item">
+                    <div class="project-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Flourish at Work</h3>
+                        <p>A mental well-being platform with intuitive UX/UI and scalable backend solutions.</p>
+                        <div class="project-tech">
+                            <span>Next.js</span>
+                            <span>Tailwind CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>InfiniLearn AI</h3>
+                        <p>An AI-driven Learning platform with adaptive, user-centric educational trajectories.</p>
+                        <div class="project-tech">
+                            <span>Python/Flask</span>
+                            <span>HTML/CSS</span>
+                            <span>OpenAI API</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Celebrating Cinema</h3>
+                        <p>A React-based web app for exploring movies with personalized watchlists and AI-driven recommendations.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>AI</span>
+                            <span>Personalization</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="publications">
             <h2>Publications & Contributions</h2>
-            <ul>
-                <li><a href="https://hackernoon.com/u/kartikkhosa" target="_blank">HackerNoon Articles</a></li>
-                <li><a href="https://academic.oup.com/genetics/article/227/1/iyae027/7624473?login=false" target="_blank">The Arabidopsis Information Resource in 2024</a> - Genetics, Oxford University Press</li>
-                <li><a href="https://honors.libraries.psu.edu/files/final_submissions/6102" target="_blank">Developing a framework for uncertainty quantification of a chemical kinetic parameter in MOCVDS</a> - Undergraduate Research, Pennsylvania State University</li>
-            </ul>
+            <div class="publications-container">
+                <div class="publication-category">
+                    <h3><i class="fas fa-journal-whills"></i> Peer-Reviewed Articles</h3>
+                    <div class="publication-item">
+                        <h4>The Arabidopsis Information Resource in 2024</h4>
+                        <p><strong>Journal:</strong> Genetics, Oxford University Press</p>
+                        <p>Detailing our efforts to modernize the Arabidopsis resource, enhancing accessibility and utility for the global research community.</p>
+                        <div class="impact-metrics">
+                            <span><i class="fas fa-chart-line"></i> Top 25% of all research outputs (Altmetric)</span>
+                            <span><i class="fas fa-percentage"></i> 87th percentile for age</span>
+                            <span><i class="fas fa-bullseye"></i> 84th percentile for age and source</span>
+                        </div>
+                        <a href="https://academic.oup.com/genetics/article/227/1/iyae027/7624473?login=false" target="_blank" class="publication-link">Read Article</a>
+                    </div>
+                </div>
+                
+                <div class="publication-category">
+                    <h3><i class="fas fa-chalkboard-teacher"></i> Conference Presentations</h3>
+                    <div class="publication-item">
+                        <h4>Building a Future-Proof digital resource: The Comprehensive Modernization of TAIR</h4>
+                        <p><strong>Conference:</strong> ISMB 2024</p>
+                        <p>Was presented at the largest and most influential conference in bioinformatics and computational biology.</p>
+                        <a href="https://www.iscb.org/ismb2024/programme-schedule/scientific-programme/bioinfo-core" target="_blank" class="publication-link">More Details</a>
+                    </div>
+                </div>
+                
+                <div class="publication-category">
+                    <h3><i class="fas fa-pen-fancy"></i> Other Contributions</h3>
+                    <div class="publication-item">
+                        <h4>Unlocking Endless Possibilities with GPT-4: My Journey from Study Plans to a Multitude of Apps</h4>
+                        <p><strong>Platform:</strong> HackerNoon</p>
+                        <p>Trended for 2+ weeks and reached the #4 spot overall on HackerNoon.</p>
+                        <a href="https://hackernoon.com/u/kartikkhosa" target="_blank" class="publication-link">View HackerNoon Profile</a>
+                    </div>
+                    <div class="publication-item">
+                        <h4>Developing a framework for uncertainty quantification of a chemical kinetic parameter in MOCVDS</h4>
+                        <p><strong>Type:</strong> Undergraduate Research, Pennsylvania State University</p>
+                        <a href="https://honors.libraries.psu.edu/files/final_submissions/6102" target="_blank" class="publication-link">View Research</a>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="judging">
             <h2>Judging & Committee Engagements</h2>
-            <div class="experience-item">
-                <h3>Information Technology World Awards</h3>
-                <h4>Globee Awards</h4>
-                <p>Acted as a judge for the 18th Annual 2023 Information Technology World Awards. Evaluated and scored nominations from global tech leaders and innovators. Witnessed a plethora of talented leaders and groundbreaking ideas that shape the IT industry.</p>
-                <p><a href="https://drive.google.com/file/d/1QqhLMgk_mes_PJlt5nzUxD_3_PoEfl-V/view?usp=drive_link" target="_blank">Judge Certificate</a></p>
-                <p><a href="https://globeeawards.com/kartik-khosa/" target="_blank">Profile on their site</a></p>
-            </div>
-            <div class="experience-item">
-                <h3>BOSC 2024</h3>
-                <h4>ISMB 2024</h4>
-                <p>Contributed as a reviewer to the Bioinformatics Open Source Conference (BOSC) 2024, part of ISMB 2024. The event focused on open source bioinformatics and open science, with a special theme on Open Approaches to AI/ML.</p>
-            </div>
-            <div class="experience-item">
-                <h3>Community and Travel Grants Committee</h3>
-                <h4>US-RSE</h4>
-                <p>Reviewing grant applications based on criteria like potential community impact, support for diversity and inclusion, and budget appropriateness. Collaboratively ranking and selecting applicants for the grants, ensuring transparency and fairness in the process. Promoting and upholding the values of fostering a diverse, equitable, and inclusive community within US-RSE.</p>
-            </div>
-            <div class="experience-item">
-                <h3>Education Technology Categories</h3>
-                <h4>SIIA CODiE Awards</h4>
-                <p>Served as a judge in 2024 for the Education Technology Categories at the SIIA CODiE Awards. Assessed leading educational technologies, focusing on innovation, impact, and the transformative power of products in the education sector.</p>
-                <p><a href="https://drive.google.com/file/d/1bverRWTjrfnJ3BxbWdU6t-Gaiexh5m7r/view?usp=sharing" target="_blank">Judge Certificate</a></p>
-                <p><a href="https://drive.google.com/file/d/1zBj46D9lJOHl0c3wI_XclLzqPCf_u2bU/view?usp=sharing" target="_blank">Judge Appreciation Letter</a></p>
-                <p><a href="https://drive.google.com/file/d/1NOdUAdRKJXFm_WLF_4_1csblJLu_rc25/view?usp=sharing" target="_blank">Profile on their site</a></p>
-            </div>
-            <div class="experience-item">
-                <h3>Artificial Intelligence Excellence Award</h3>
-                <h4>Business Intelligence Group</h4>
-                <p>Participated as a judge in 2024, evaluating entries for the Business Intelligence Group awards. This role involved scrutinizing the merits of various business innovations, emphasizing sustainable and socially impactful business practices in the AI space.</p>
-                <p><a href="https://drive.google.com/file/d/1nhnTyhrZMlG-xQVKR8JyBhL1l9gInY8t/view?usp=sharing" target="_blank">Judge Certificate</a></p>
-                <p><a href="https://drive.google.com/file/d/11RbG9qB9JOLacfUBtkdvOK1hZkDadvJV/view?usp=sharing" target="_blank">Judge Appreciation Letter</a></p>
+            <div class="judging-grid">
+                <div class="judging-item">
+                    <div class="judging-icon"><i class="fas fa-award"></i></div>
+                    <h3>Information Technology World Awards</h3>
+                    <h4>Globee Awards</h4>
+                    <p>Judge for the 18th Annual 2023 Information Technology World Awards, evaluating global tech leaders and innovators.</p>
+                </div>
+                <div class="judging-item">
+                    <div class="judging-icon"><i class="fas fa-dna"></i></div>
+                    <h3>BOSC 2024</h3>
+                    <h4>ISMB 2024</h4>
+                    <p>Reviewer for the Bioinformatics Open Source Conference, focusing on open source bioinformatics and AI/ML approaches.</p>
+                </div>
+                <div class="judging-item">
+                    <div class="judging-icon"><i class="fas fa-users"></i></div>
+                    <h3>Community and Travel Grants Committee</h3>
+                    <h4>US-RSE</h4>
+                    <p>Reviewing grant applications to foster diversity, inclusion, and community impact in the US Research Software Engineer community.</p>
+                </div>
+                <div class="judging-item">
+                    <div class="judging-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Education Technology Categories</h3>
+                    <h4>SIIA CODiE Awards</h4>
+                    <p>2024 judge for Education Technology Categories, assessing innovation and impact in educational products.</p>
+                </div>
+                <div class="judging-item">
+                    <div class="judging-icon"><i class="fas fa-robot"></i></div>
+                    <h3>Artificial Intelligence Excellence Award</h3>
+                    <h4>Business Intelligence Group</h4>
+                    <p>2024 judge evaluating business innovations with a focus on sustainable and socially impactful AI practices.</p>
+                </div>
             </div>
         </section>
 
         <section id="memberships">
-            <h2>Memberships</h2>
-            <ul>
-                <li>SAS Eminent Fellow of <strong>Scholars Academic and Scientific Society</strong></li>
-                <li>Dignitary Fellow of <strong>International Organization for Academic and Scientific Development (IOASD)</strong></li>
-                <li>Member of <strong>Leaders Excellence at Harvard Square</strong></li>
-                <li>Member of <strong>Global CTO Forum</strong></li>
-                <li>Member of <strong>International Association of Engineers</strong></li>
-                <li>Member of <strong>US Research Software Engineer Association</strong></li>
-            </ul>
+            <h2>Professional Memberships</h2>
+            <div class="memberships-grid">
+                <div class="membership-item">
+                    <div class="membership-icon"><i class="fas fa-trophy"></i></div>
+                    <h3>SAS Eminent Fellow</h3>
+                    <p>Scholars Academic and Scientific Society</p>
+                </div>
+                <div class="membership-item">
+                    <div class="membership-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Dignitary Fellow</h3>
+                    <p>International Organization for Academic and Scientific Development (IOASD)</p>
+                </div>
+                <div class="membership-item">
+                    <div class="membership-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>Member</h3>
+                    <p>Global CTO Forum</p>
+                </div>
+                <div class="membership-item">
+                    <div class="membership-icon"><i class="fas fa-wrench"></i></div>
+                    <h3>Member</h3>
+                    <p>International Association of Engineers</p>
+                </div>
+                <div class="membership-item">
+                    <div class="membership-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Member</h3>
+                    <p>US Research Software Engineer Association</p>
+                </div>
+            </div>
         </section>
     </main>
 
