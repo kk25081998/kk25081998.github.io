@@ -2,110 +2,352 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-    <title>Software Engineer Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kartik Khosa - Innovative Full Stack Engineer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #ecf0f1;
+            --background-color: #1a1a1a;
+            --card-bg-color: rgba(52, 152, 219, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+
+        #canvas-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        section {
+            padding: 4rem 0;
+            margin: 2rem 0;
+            background-color: rgba(26, 26, 26, 0.8);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            opacity: 0; /* Hidden initially */
+            transform: translateY(50px); /* Start position for scroll animation */
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+        }
+
+        p, ul {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background-color: var(--card-bg-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .experience-item, .project-item {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: var(--card-bg-color);
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .experience-item:hover, .project-item:hover {
+            transform: translateY(-5px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            background-color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <nav class="container-fluid">
-        <ul>
-            <li><strong>John Doe</strong></li>
-        </ul>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#engagements">Engagements</a></li>
-            <li><a href="#memberships">Memberships</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <main class="container">
-        <div class="grid">
-            <section id="about">
-                <hgroup>
-                    <h2>About Me</h2>
-                    <h3>Software Engineer & Tech Enthusiast</h3>
-                </hgroup>
-                <p>Detailed introduction about the software engineer, highlighting unique aspects of their profile.</p>
-                <figure>
-                    <img src="https://source.unsplash.com/featured/?softwareengineer" alt="Software Engineer" />
-                    <figcaption>Image Credit: Unsplash</figcaption>
-                </figure>
-            </section>
-            <section id="education">
-                <hgroup>
-                    <h2>Education</h2>
-                    <h3>Academic Background</h3>
-                </hgroup>
-                <p>Description of educational qualifications and achievements.</p>
-            </section>
-            <section id="skills">
-                <hgroup>
-                    <h2>Skills</h2>
-                    <h3>Technical and Soft Skills</h3>
-                </hgroup>
-                <p>Comprehensive list of skills including programming languages, software, and personal attributes.</p>
-            </section>
-            <section id="experience">
-                <hgroup>
-                    <h2>Work Experience</h2>
-                    <h3>Professional Career</h3>
-                </hgroup>
-                <p>Detailed overview of work history, roles, and responsibilities.</p>
-            </section>
-            <section id="projects">
-                <hgroup>
-                    <h2>Personal Projects</h2>
-                    <h3>Innovative Creations</h3>
-                </hgroup>
-                <p>Showcase of personal projects, including descriptions and outcomes.</p>
-            </section>
-            <section id="publications">
-                <hgroup>
-                    <h2>Publications & Academic Contributions</h2>
-                    <h3>Research and Writing</h3>
-                </hgroup>
-                <p>List and details of publications, research papers, and academic contributions.</p>
-            </section>
-            <section id="engagements">
-                <hgroup>
-                    <h2>Judging and Committee Engagements</h2>
-                    <h3>Leadership and Community Service</h3>
-                </hgroup>
-                <p>Overview of involvement in judging panels, committees, and other professional engagements.</p>
-            </section>
-            <section id="memberships">
-                <hgroup>
-                    <h2>Memberships</h2>
-                    <h3>Professional Associations</h3>
-                </hgroup>
-                <p>Details of memberships in professional organizations and societies.</p>
-            </section>
-            <section id="contact">
-                <hgroup>
-                    <h2>Contact</h2>
-                    <h3>Get in Touch</h3>
-                </hgroup>
-                <form class="grid">
-                    <input type="text" id="name" name="name" placeholder="Your Name" aria-label="Your Name" required />
-                    <input type="email" id="email" name="email" placeholder="Your Email" aria-label="Your Email" required />
-                    <textarea id="message" name="message" placeholder="Your Message" aria-label="Your Message" required></textarea>
-                    <button type="submit">Send</button>
-                </form>
-            </section>
+    <div id="canvas-container"></div>
+
+    <header>
+        <div class="container">
+            <h1>Kartik Khosa</h1>
+            <p>Innovative Full Stack Engineer & Data Scientist</p>
+            <p><a href="https://www.linkedin.com/in/kartikkhosa/" target="_blank">LinkedIn</a> | kartik.khosa@gmail.com | 814 862 8541 | McLean, VA</p>
         </div>
+    </header>
+
+    <main class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>As a proficient Full Stack Software Engineer, I bring a wealth of experience in both backend (Java, Python, Node.js) and frontend (Vue.js, React, HTML/CSS) development. My journey has led me to optimize systems and enhance UI at Phoenix Bioinformatics, as well as deliver innovative, client-focused solutions at Appian Corporation. I thrive on solving complex problems and adapting to diverse technological landscapes.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>Java (SpringBoot, Maven)</li>
+                        <li>Python (Django, Flask)</li>
+                        <li>Node.js</li>
+                        <li>JavaScript (Vue.js, React)</li>
+                        <li>HTML5/CSS3</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Databases</h3>
+                    <ul>
+                        <li>MySQL</li>
+                        <li>MariaDB</li>
+                        <li>MongoDB</li>
+                        <li>Neo4j</li>
+                        <li>AWS S3</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Tools & Platforms</h3>
+                    <ul>
+                        <li>Git (Github/Gitlab)</li>
+                        <li>JIRA</li>
+                        <li>Docker</li>
+                        <li>AWS (EC2, S3, SES, RDS)</li>
+                        <li>Google Cloud Platform</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Work Experience</h2>
+            <div class="experience-item">
+                <h3>Full Stack Software Engineer</h3>
+                <h4>Phoenix Bioinformatics | October 2022 – Present</h4>
+                <ul>
+                    <li>Developed an automated Java pipeline for arabidopsis.org, optimizing data retrieval times.</li>
+                    <li>Architected SpringBoot Java APIs for AWS SES email process automation.</li>
+                    <li>Created Vue.js dashboards, boosting user engagement by 40%.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Solution Engineer</h3>
+                <h4>Appian Corporation | February 2020 – October 2022</h4>
+                <ul>
+                    <li>Optimized 25+ custom Java plugins, ensuring alignment with company standards.</li>
+                    <li>Managed authentication protocols for 100+ Appian businesses.</li>
+                    <li>Authored knowledge base articles and training materials for global team members.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Personal Projects</h2>
+            <div class="project-item">
+                <h3>Flourish at Work Web Platform</h3>
+                <p>A mental well-being platform with intuitive UX/UI and scalable backend solutions using Python/Flask, HTML/CSS (Bootstrap), JavaScript, and jQuery.</p>
+            </div>
+            <div class="project-item">
+                <h3><a href="https://github.com/kk25081998/StudyPlanGen" target="_blank" style="color: var(--secondary-color);">InfiniLearn AI</a></h3>
+                <p>An AI-driven Learning platform with adaptive, user-centric educational trajectories using Python/Flask, HTML, CSS, OpenAI API, and JavaScript.</p>
+            </div>
+            <div class="project-item">
+                <h3>Celebrating Cinema Web App</h3>
+                <p>A React-based web app for exploring movies with personalized watchlists and AI-driven recommendations tailored to user preferences.</p>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>Publications & Contributions</h2>
+            <ul>
+                <li><a href="https://hackernoon.com/u/kartikkhosa" target="_blank">HackerNoon Articles</a></li>
+                <li><a href="https://academic.oup.com/genetics/article/227/1/iyae027/7624473?login=false" target="_blank">The Arabidopsis Information Resource in 2024</a> - Genetics, Oxford University Press</li>
+                <li><a href="https://honors.libraries.psu.edu/files/final_submissions/6102" target="_blank">Developing a framework for uncertainty quantification of a chemical kinetic parameter in MOCVDS</a> - Undergraduate Research, Pennsylvania State University</li>
+            </ul>
+        </section>
+
+        <section id="judging">
+            <h2>Judging & Committee Engagements</h2>
+            <div class="experience-item">
+                <h3>Information Technology World Awards</h3>
+                <h4>Globee Awards</h4>
+                <p>Acted as a judge for the 18th Annual 2023 Information Technology World Awards. Evaluated and scored nominations from global tech leaders and innovators. Witnessed a plethora of talented leaders and groundbreaking ideas that shape the IT industry.</p>
+                <p><a href="https://drive.google.com/file/d/1QqhLMgk_mes_PJlt5nzUxD_3_PoEfl-V/view?usp=drive_link" target="_blank">Judge Certificate</a></p>
+                <p><a href="https://globeeawards.com/kartik-khosa/" target="_blank">Profile on their site</a></p>
+            </div>
+            <div class="experience-item">
+                <h3>BOSC 2024</h3>
+                <h4>ISMB 2024</h4>
+                <p>Contributed as a reviewer to the Bioinformatics Open Source Conference (BOSC) 2024, part of ISMB 2024. The event focused on open source bioinformatics and open science, with a special theme on Open Approaches to AI/ML.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Community and Travel Grants Committee</h3>
+                <h4>US-RSE</h4>
+                <p>Reviewing grant applications based on criteria like potential community impact, support for diversity and inclusion, and budget appropriateness. Collaboratively ranking and selecting applicants for the grants, ensuring transparency and fairness in the process. Promoting and upholding the values of fostering a diverse, equitable, and inclusive community within US-RSE.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Education Technology Categories</h3>
+                <h4>SIIA CODiE Awards</h4>
+                <p>Served as a judge in 2024 for the Education Technology Categories at the SIIA CODiE Awards. Assessed leading educational technologies, focusing on innovation, impact, and the transformative power of products in the education sector.</p>
+                <p><a href="https://drive.google.com/file/d/1bverRWTjrfnJ3BxbWdU6t-Gaiexh5m7r/view?usp=sharing" target="_blank">Judge Certificate</a></p>
+                <p><a href="https://drive.google.com/file/d/1zBj46D9lJOHl0c3wI_XclLzqPCf_u2bU/view?usp=sharing" target="_blank">Judge Appreciation Letter</a></p>
+                <p><a href="https://drive.google.com/file/d/1NOdUAdRKJXFm_WLF_4_1csblJLu_rc25/view?usp=sharing" target="_blank">Profile on their site</a></p>
+            </div>
+            <div class="experience-item">
+                <h3>Artificial Intelligence Excellence Award</h3>
+                <h4>Business Intelligence Group</h4>
+                <p>Participated as a judge in 2024, evaluating entries for the Business Intelligence Group awards. This role involved scrutinizing the merits of various business innovations, emphasizing sustainable and socially impactful business practices in the AI space.</p>
+                <p><a href="https://drive.google.com/file/d/1nhnTyhrZMlG-xQVKR8JyBhL1l9gInY8t/view?usp=sharing" target="_blank">Judge Certificate</a></p>
+                <p><a href="https://drive.google.com/file/d/11RbG9qB9JOLacfUBtkdvOK1hZkDadvJV/view?usp=sharing" target="_blank">Judge Appreciation Letter</a></p>
+            </div>
+        </section>
+
+        <section id="memberships">
+            <h2>Memberships</h2>
+            <ul>
+                <li>SAS Eminent Fellow of <strong>Scholars Academic and Scientific Society</strong></li>
+                <li>Dignitary Fellow of <strong>International Organization for Academic and Scientific Development (IOASD)</strong></li>
+                <li>Member of <strong>Leaders Excellence at Harvard Square</strong></li>
+                <li>Member of <strong>Global CTO Forum</strong></li>
+                <li>Member of <strong>International Association of Engineers</strong></li>
+                <li>Member of <strong>US Research Software Engineer Association</strong></li>
+            </ul>
+        </section>
     </main>
-    <footer class="container">
-        <small>
-            <a href="#about">About</a> • <a href="#education">Education</a> • <a href="#skills">Skills</a> •
-            <a href="#experience">Experience</a> • <a href="#projects">Projects</a> •
-            <a href="#publications">Publications</a> • <a href="#engagements">Engagements</a> •
-            <a href="#memberships">Memberships</a> • <a href="#contact">Contact</a>
-        </small>
+
+    <footer>
+        <p>&copy; 2024 Kartik Khosa. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Three.js animation setup
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById('canvas-container').appendChild(renderer.domElement);
+
+        // Create floating cubes
+        const cubes = [];
+        for (let i = 0; i < 50; i++) {
+            const geometry = new THREE.BoxGeometry(1, 1, 1);
+            const material = new THREE.MeshBasicMaterial({ color: 0x3498db, wireframe: true });
+            const cube = new THREE.Mesh(geometry, material);
+            cube.position.set(
+                Math.random() * 40 - 20,
+                Math.random() * 40 - 20,
+                Math.random() * 40 - 20
+            );
+            scene.add(cube);
+            cubes.push(cube);
+        }
+
+        camera.position.z = 30;
+
+        // Animation loop
+        function animate() {
+            requestAnimationFrame(animate);
+            cubes.forEach(cube => {
+                cube.rotation.x += 0.01;
+                cube.rotation.y += 0.01;
+            });
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        // Resize handler
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        // Scroll animation
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('section, .skill-card, .experience-item, .project-item');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementBottom = element.getBoundingClientRect().bottom;
+                if (elementTop < window.innerHeight && elementBottom > 0) {
+                    gsap.to(element, { opacity: 1, y: 0, duration: 0.5 });
+                } else {
+                    gsap.to(element, { opacity: 0, y: 50, duration: 0.5 });
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateOnScroll);
+        animateOnScroll(); // Initial call
+    </script>
 </body>
 </html>
