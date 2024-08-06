@@ -17,7 +17,7 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
-    overflow-x: hidden;
+    overflow-x: false;
 }
 
 #canvas-container {
@@ -32,7 +32,9 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 20px 20px;
+    align-items: center;
+    min-width: auto;
 }
 
 header {
@@ -271,7 +273,7 @@ a:hover {
 /* Footer Styles */
 footer {
     text-align: center;
-    padding: 2rem 0;
+    padding: 20px 20px;
     background-color: var(--primary-color);
 }
 
@@ -491,10 +493,10 @@ footer {
 
 .judging-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto auto;
 }
 
 .judging-item {
@@ -532,23 +534,6 @@ footer {
 .judging-item p {
     font-size: 0.9rem;
     line-height: 1.6;
-}
-
-.bottom-row {
-    grid-column: span 3;
-}
-
-.judging-grid::after {
-    content: "";
-    display: block;
-    grid-column: span 3;
-}
-
-@media (min-width: 769px) {
-    .bottom-row {
-        width: calc(66.67% - 1rem);
-        margin: 0 auto;
-    }
 }
 
 @media (max-width: 768px) {
@@ -725,5 +710,12 @@ footer {
 
     .education-logo {
         margin-bottom: 1rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    section, #about, #skills, #experience, #projects, #publications, #judging, #memberships, #education {
+        padding: 2rem 0;
     }
 }
