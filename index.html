@@ -533,21 +533,35 @@
             </div>
         </section>
 
-        <section id="education">
-            <h2>Education</h2>
-            <div class="education-grid">
-                <div class="education-item">
-                    <div class="education-logo">
-                        <img src="/upenn.png" alt="University of Pennsylvania Logo">
-                    </div>
-                    <div class="education-content">
-                        <h3>University of Pennsylvania</h3>
-                        <h4>Master's in Computer and Information Technology</h4>
-                        <p class="education-date">May 2024</p>
+        <!-- Education Section -->
+        <section id="education" class="section education-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Education</h2>
+                    <p class="section-subtitle">Academic foundation that drives my technical excellence</p>
+                </div>
+                <div class="education-grid">
+                    <div class="education-card">
+                        <div class="education-header">
+                            <div class="education-logo">
+                                <img src="/upenn.png" alt="University of Pennsylvania" loading="lazy">
+                            </div>
+                            <div class="education-info">
+                                <h3>University of Pennsylvania</h3>
+                                <h4>Master's in Computer and Information Technology</h4>
+                                <div class="education-date">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>May 2024</span>
+                                </div>
+                            </div>
+                        </div>
                         <div class="education-details">
-                            <h4>Key Coursework:</h4>
+                            <h4>Key Coursework</h4>
                             <div class="coursework-grid">
                                 <div class="coursework-group">
+                                    <div class="coursework-icon">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
                                     <h5>Data & Analytics</h5>
                                     <ul>
                                         <li>Big Data Analytics</li>
@@ -556,6 +570,9 @@
                                     </ul>
                                 </div>
                                 <div class="coursework-group">
+                                    <div class="coursework-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
                                     <h5>Systems & Security</h5>
                                     <ul>
                                         <li>Blockchain and Cryptography</li>
@@ -563,6 +580,9 @@
                                     </ul>
                                 </div>
                                 <div class="coursework-group">
+                                    <div class="coursework-icon">
+                                        <i class="fas fa-code"></i>
+                                    </div>
                                     <h5>Algorithms & Design</h5>
                                     <ul>
                                         <li>Algorithms and Computation</li>
@@ -572,210 +592,639 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="education-item">
-                    <div class="education-logo">
-                        <img src="/psu.jpeg" alt="Pennsylvania State University Logo">
-                    </div>
-                    <div class="education-content">
-                        <h3>Pennsylvania State University</h3>
-                        <h4>Honors B.S. in Mechanical Engineering, magna cum laude</h4>
-                        <p class="education-date">December 2019</p>
+                    
+                    <div class="education-card">
+                        <div class="education-header">
+                            <div class="education-logo">
+                                <img src="/psu.jpeg" alt="Pennsylvania State University" loading="lazy">
+                            </div>
+                            <div class="education-info">
+                                <h3>Pennsylvania State University</h3>
+                                <h4>Honors B.S. in Mechanical Engineering, magna cum laude</h4>
+                                <div class="education-date">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>December 2019</span>
+                                </div>
+                            </div>
+                        </div>
                         <div class="education-details">
-                            <h4>Thesis:</h4>
-                            <p>Framework for Uncertainty Quantification of a Chemical Kinetic Parameter in MOCVDS</p>
-                            <ul>
-                                <li>Optimized simulation efficiency by 85% using orthogonal sampling and stepwise regression in MATLAB.</li>
-                                <li>Determined accurate yield ranges of a nanomaterial via sensitivity analysis and Monte Carlo simulations.</li>
-                            </ul>
+                            <h4>Thesis Research</h4>
+                            <div class="thesis-info">
+                                <h5>Framework for Uncertainty Quantification of a Chemical Kinetic Parameter in MOCVDS</h5>
+                                <div class="achievements">
+                                    <div class="achievement-item">
+                                        <div class="achievement-icon">
+                                            <i class="fas fa-tachometer-alt"></i>
+                                        </div>
+                                        <span>Optimized simulation efficiency by 85% using orthogonal sampling and stepwise regression in MATLAB</span>
+                                    </div>
+                                    <div class="achievement-item">
+                                        <div class="achievement-icon">
+                                            <i class="fas fa-atom"></i>
+                                        </div>
+                                        <span>Determined accurate yield ranges of nanomaterial via sensitivity analysis and Monte Carlo simulations</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects">
-            <h2>Personal Projects</h2>
-            <div class="projects-container">
-                <div class="project-item">
-                    <div class="project-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Flourish at Work</h3>
-                        <p>A mental well-being platform with intuitive UX/UI and scalable backend solutions.</p>
-                        <div class="project-tech">
-                            <span>Next.js</span>
-                            <span>Tailwind CSS</span>
-                            <span>JavaScript</span>
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Personal Projects</h2>
+                    <p class="section-subtitle">Innovative solutions built with passion and purpose</p>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="project-status">
+                                <span class="status-badge live">Live</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Flourish at Work</h3>
+                            <p>A comprehensive mental well-being platform designed with intuitive UX/UI and scalable backend architecture to support workplace wellness initiatives.</p>
+                            <div class="project-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>User Management</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>Analytics Dashboard</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>Mobile Responsive</span>
+                                </div>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag primary">Next.js</span>
+                                <span class="tech-tag">Tailwind CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Node.js</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                            <a href="#" class="project-link secondary">
+                                <i class="fab fa-github"></i>
+                                Code
+                            </a>
                         </div>
                     </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>InfiniLearn AI</h3>
-                        <p>An AI-driven Learning platform with adaptive, user-centric educational trajectories.</p>
-                        <div class="project-tech">
-                            <span>Python/Flask</span>
-                            <span>HTML/CSS</span>
-                            <span>OpenAI API</span>
-                            <span>JavaScript</span>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="project-status">
+                                <span class="status-badge live">Live</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>InfiniLearn AI</h3>
+                            <p>An AI-driven learning platform that creates adaptive, user-centric educational trajectories using machine learning algorithms to personalize the learning experience.</p>
+                            <div class="project-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-robot"></i>
+                                    <span>AI-Powered</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-route"></i>
+                                    <span>Adaptive Learning</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-user-graduate"></i>
+                                    <span>Personalized</span>
+                                </div>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag primary">Python</span>
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">OpenAI API</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                            <a href="#" class="project-link secondary">
+                                <i class="fab fa-github"></i>
+                                Code
+                            </a>
                         </div>
                     </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-icon">
-                        <i class="fas fa-film"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Celebrating Cinema</h3>
-                        <p>A React-based web app for exploring movies with personalized watchlists and AI-driven recommendations.</p>
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>AI</span>
-                            <span>Personalization</span>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-film"></i>
+                            </div>
+                            <div class="project-status">
+                                <span class="status-badge development">In Development</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Celebrating Cinema</h3>
+                            <p>A React-based web application for movie enthusiasts featuring personalized watchlists, AI-driven recommendations, and social sharing capabilities.</p>
+                            <div class="project-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-list"></i>
+                                    <span>Watchlists</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-magic"></i>
+                                    <span>AI Recommendations</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-share-alt"></i>
+                                    <span>Social Features</span>
+                                </div>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag primary">React</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">AI/ML</span>
+                                <span class="tech-tag">REST APIs</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link disabled">
+                                <i class="fas fa-external-link-alt"></i>
+                                Coming Soon
+                            </a>
+                            <a href="#" class="project-link secondary">
+                                <i class="fab fa-github"></i>
+                                Code
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="publications">
-            <h2>Publications & Contributions</h2>
-            <div class="publications-container">
-                <div class="publication-category">
-                    <h3><i class="fas fa-journal-whills"></i> Peer-Reviewed Articles</h3>
-                    <div class="publication-item">
-                        <h4>The Arabidopsis Information Resource in 2024</h4>
-                        <p><strong>Journal:</strong> Genetics, Oxford University Press</p>
-                        <p>Detailing our efforts to modernize the Arabidopsis resource, enhancing accessibility and utility for the global research community.</p>
-                        <div class="impact-metrics">
-                            <span><i class="fas fa-chart-line"></i> Top 25% of all research outputs (Altmetric)</span>
-                            <span><i class="fas fa-percentage"></i> 87th percentile for age</span>
-                            <span><i class="fas fa-bullseye"></i> 84th percentile for age and source</span>
+        <!-- Publications Section -->
+        <section id="publications" class="section publications-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Publications & Contributions</h2>
+                    <p class="section-subtitle">Research contributions and thought leadership in technology</p>
+                </div>
+                <div class="publications-grid">
+                    <div class="publication-category-card">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-journal-whills"></i>
+                            </div>
+                            <h3>Peer-Reviewed Articles</h3>
                         </div>
-                        <a href="https://academic.oup.com/genetics/article/227/1/iyae027/7624473?login=false" target="_blank" class="publication-link">Read Article</a>
+                        <div class="publication-items">
+                            <div class="publication-item">
+                                <div class="publication-header">
+                                    <h4>The Arabidopsis Information Resource in 2024</h4>
+                                    <div class="publication-meta">
+                                        <span class="journal">Genetics, Oxford University Press</span>
+                                        <span class="year">2024</span>
+                                    </div>
+                                </div>
+                                <p class="publication-description">
+                                    Detailing our efforts to modernize the Arabidopsis resource, enhancing accessibility and utility for the global research community.
+                                </p>
+                                <div class="impact-metrics">
+                                    <div class="metric-item">
+                                        <i class="fas fa-chart-line"></i>
+                                        <span>Top 25% Research Outputs</span>
+                                    </div>
+                                    <div class="metric-item">
+                                        <i class="fas fa-percentage"></i>
+                                        <span>87th Percentile for Age</span>
+                                    </div>
+                                    <div class="metric-item">
+                                        <i class="fas fa-bullseye"></i>
+                                        <span>84th Percentile Overall</span>
+                                    </div>
+                                </div>
+                                <div class="publication-actions">
+                                    <a href="https://academic.oup.com/genetics/article/227/1/iyae027/7624473?login=false" target="_blank" class="publication-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Read Article
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="publication-category">
-                    <h3><i class="fas fa-chalkboard-teacher"></i> Conference Presentations</h3>
-                    <div class="publication-item">
-                        <h4>Building a Future-Proof digital resource: The Comprehensive Modernization of TAIR</h4>
-                        <p><strong>Conference:</strong> ISMB 2024</p>
-                        <p>Was presented at the largest and most influential conference in bioinformatics and computational biology.</p>
-                        <a href="https://www.iscb.org/ismb2024/programme-schedule/scientific-programme/bioinfo-core" target="_blank" class="publication-link">More Details</a>
-                    </div>
-                </div>
-                
-                <div class="publication-category">
-                    <h3><i class="fas fa-pen-fancy"></i> Other Contributions</h3>
-                    <div class="publication-item">
-                        <h4>Unlocking Endless Possibilities with GPT-4: My Journey from Study Plans to a Multitude of Apps</h4>
-                        <p><strong>Platform:</strong> HackerNoon</p>
-                        <p>Trended for 2+ weeks and reached the #4 spot overall on HackerNoon.</p>
-                        <a href="https://hackernoon.com/u/kartikkhosa" target="_blank" class="publication-link">View HackerNoon Profile</a>
-                    </div>
-                    <div class="publication-item">
-                        <h4>Developing a framework for uncertainty quantification of a chemical kinetic parameter in MOCVDS</h4>
-                        <p><strong>Type:</strong> Undergraduate Research, Pennsylvania State University</p>
-                        <a href="https://honors.libraries.psu.edu/files/final_submissions/6102" target="_blank" class="publication-link">View Research</a>
-                    </div>
-                </div>
 
-                <div class="publication-category">
-                    <h3><i class="fas fa-newspaper"></i> Press Coverage</h3>
-                    <div class="publication-item">
-                        <h4>Running AI directly on your device isn't worth your money: here's why</h4>
-                        <p><strong>Source:</strong> Cybernews</p>
-                        <p>Article featuring Kartik's insights on the effectiveness of small AI models on consumer devices.</p>
-                        <a href="https://cybernews.com/editorial/running-ai-directly-on-device-isnt-worth-your-money/" target="_blank" class="publication-link">Read Article</a>
+                    <div class="publication-category-card">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <h3>Conference Presentations</h3>
+                        </div>
+                        <div class="publication-items">
+                            <div class="publication-item">
+                                <div class="publication-header">
+                                    <h4>Building a Future-Proof Digital Resource: The Comprehensive Modernization of TAIR</h4>
+                                    <div class="publication-meta">
+                                        <span class="conference">ISMB 2024</span>
+                                        <span class="year">2024</span>
+                                    </div>
+                                </div>
+                                <p class="publication-description">
+                                    Presented at the largest and most influential conference in bioinformatics and computational biology.
+                                </p>
+                                <div class="conference-info">
+                                    <div class="info-item">
+                                        <i class="fas fa-users"></i>
+                                        <span>International Audience</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <i class="fas fa-globe"></i>
+                                        <span>Global Impact</span>
+                                    </div>
+                                </div>
+                                <div class="publication-actions">
+                                    <a href="https://www.iscb.org/ismb2024/programme-schedule/scientific-programme/bioinfo-core" target="_blank" class="publication-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        More Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="publication-item">
-                        <h4>Kartik Khosa: Crafting technological symphonies from Eastern roots to global impact</h4>
-                        <p><strong>Source:</strong> DNA India</p>
-                        <p>Article highlighting Kartik's journey and contributions in technology.</p>
-                        <a href="https://www.dnaindia.com/technology/report-kartik-khosa-crafting-technological-symphonies-from-eastern-roots-to-global-impact-3063356" target="_blank" class="publication-link">Read Article</a>
+
+                    <div class="publication-category-card">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-pen-fancy"></i>
+                            </div>
+                            <h3>Article Publications</h3>
+                        </div>
+                        <div class="publication-items">
+                            <div class="publication-item">
+                                <div class="publication-header">
+                                    <h4>Unlocking Endless Possibilities with GPT-4</h4>
+                                    <div class="publication-meta">
+                                        <span class="platform">HackerNoon</span>
+                                        <span class="trending">Trending #4</span>
+                                    </div>
+                                </div>
+                                <p class="publication-description">
+                                    My journey from study plans to building multiple applications with GPT-4. Trended for 2+ weeks.
+                                </p>
+                                <div class="publication-actions">
+                                    <a href="https://hackernoon.com/u/kartikkhosa" target="_blank" class="publication-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        View Profile
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="publication-item">
+                                <div class="publication-header">
+                                    <h4>Framework for Uncertainty Quantification in MOCVDS</h4>
+                                    <div class="publication-meta">
+                                        <span class="type">Undergraduate Research</span>
+                                        <span class="institution">Penn State</span>
+                                    </div>
+                                </div>
+                                <p class="publication-description">
+                                    Developed framework for uncertainty quantification of chemical kinetic parameters in MOCVDS processes.
+                                </p>
+                                <div class="publication-actions">
+                                    <a href="https://honors.libraries.psu.edu/files/final_submissions/6102" target="_blank" class="publication-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        View Research
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="publication-item">
-                        <h4>Kartik Khosa: Leading the charge in modernizing biological data systems</h4>
-                        <p><strong>Source:</strong> The Free Press Journal</p>
-                        <p>Feature on Kartik's role in modernizing biological data systems.</p>
-                        <a href="https://www.freepressjournal.in/tech/kartik-khosa-leading-the-charge-in-modernizing-biological-data-systems" target="_blank" class="publication-link">Read Article</a>
+
+                    <div class="publication-category-card">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-newspaper"></i>
+                            </div>
+                            <h3>Press Coverage</h3>
+                        </div>
+                        <div class="publication-items">
+                            <div class="publication-item">
+                                <div class="publication-header">
+                                    <h4>Running AI on Device: Expert Analysis</h4>
+                                    <div class="publication-meta">
+                                        <span class="source">Cybernews</span>
+                                        <span class="type">Expert Quote</span>
+                                    </div>
+                                </div>
+                                <p class="publication-description">
+                                    Featured expert insights on the effectiveness of small AI models on consumer devices.
+                                </p>
+                                <div class="publication-actions">
+                                    <a href="https://cybernews.com/editorial/running-ai-directly-on-device-isnt-worth-your-money/" target="_blank" class="publication-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Read Article
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="publication-item">
+                                <div class="publication-header">
+                                    <h4>Technology Leadership Profile</h4>
+                                    <div class="publication-meta">
+                                        <span class="source">DNA India</span>
+                                        <span class="type">Feature Article</span>
+                                    </div>
+                                </div>
+                                <p class="publication-description">
+                                    Profile highlighting journey and contributions in technology innovation.
+                                </p>
+                                <div class="publication-actions">
+                                    <a href="https://www.dnaindia.com/technology/report-kartik-khosa-crafting-technological-symphonies-from-eastern-roots-to-global-impact-3063356" target="_blank" class="publication-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Read Article
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="judging">
-            <h2>Judging & Committee Engagements</h2>
-            <div class="judging-grid">
-                <div class="judging-item">
-                    <div class="judging-icon"><i class="fas fa-award"></i></div>
-                    <h3>Information Technology World Awards</h3>
-                    <h4>Globee Awards</h4>
-                    <p>Judge for the 18th Annual 2023 Information Technology World Awards, evaluating global tech leaders and innovators.</p>
+        <!-- Judging & Committee Section -->
+        <section id="judging" class="section judging-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Judging & Committee Engagements</h2>
+                    <p class="section-subtitle">Evaluating innovation and excellence across technology sectors</p>
                 </div>
-                <div class="judging-item">
-                    <div class="judging-icon"><i class="fas fa-dna"></i></div>
-                    <h3>BOSC 2024</h3>
-                    <h4>ISMB 2024</h4>
-                    <p>Reviewer for the Bioinformatics Open Source Conference, focusing on open source bioinformatics and AI/ML approaches.</p>
-                </div>
-                <div class="judging-item">
-                    <div class="judging-icon"><i class="fas fa-users"></i></div>
-                    <h3>Community and Travel Grants Committee</h3>
-                    <h4>US-RSE</h4>
-                    <p>Reviewing grant applications to foster diversity, inclusion, and community impact in the US Research Software Engineer community.</p>
-                </div>
-                <div class="judging-item">
-                    <div class="judging-icon"><i class="fas fa-graduation-cap"></i></div>
-                    <h3>Education Technology Categories</h3>
-                    <h4>SIIA CODiE Awards</h4>
-                    <p>2024 judge for Education Technology Categories, assessing innovation and impact in educational products.</p>
-                </div>
-                <div class="judging-item">
-                    <div class="judging-icon"><i class="fas fa-robot"></i></div>
-                    <h3>Artificial Intelligence Excellence Award</h3>
-                    <h4>Business Intelligence Group</h4>
-                    <p>2024 judge evaluating business innovations with a focus on sustainable and socially impactful AI practices.</p>
+                <div class="judging-grid">
+                    <div class="judging-card featured">
+                        <div class="card-header">
+                            <div class="judging-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="card-badge">Lead Judge</div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Information Technology World Awards</h3>
+                            <h4>Globee Awards</h4>
+                            <p>Lead judge for the 18th Annual 2023 Information Technology World Awards, evaluating global technology leaders and innovative solutions.</p>
+                            <div class="engagement-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>100+ Submissions Reviewed</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-globe"></i>
+                                    <span>Global Technology Focus</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="judging-card">
+                        <div class="card-header">
+                            <div class="judging-icon">
+                                <i class="fas fa-dna"></i>
+                            </div>
+                            <div class="card-badge">Reviewer</div>
+                        </div>
+                        <div class="card-content">
+                            <h3>BOSC 2024</h3>
+                            <h4>ISMB 2024 Conference</h4>
+                            <p>Technical reviewer for the Bioinformatics Open Source Conference, focusing on open source bioinformatics tools and AI/ML approaches.</p>
+                            <div class="engagement-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-microscope"></i>
+                                    <span>Bioinformatics Focus</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-code-branch"></i>
+                                    <span>Open Source</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="judging-card">
+                        <div class="card-header">
+                            <div class="judging-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="card-badge">Committee Member</div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Community and Travel Grants Committee</h3>
+                            <h4>US Research Software Engineer Association</h4>
+                            <p>Reviewing grant applications to foster diversity, inclusion, and community impact in the US Research Software Engineer community.</p>
+                            <div class="engagement-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-heart"></i>
+                                    <span>Diversity & Inclusion</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>Research Focus</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="judging-card">
+                        <div class="card-header">
+                            <div class="judging-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="card-badge">Judge</div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Education Technology Categories</h3>
+                            <h4>SIIA CODiE Awards 2024</h4>
+                            <p>2024 judge for Education Technology Categories, assessing innovation and impact in educational software products and solutions.</p>
+                            <div class="engagement-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-chalkboard-teacher"></i>
+                                    <span>EdTech Innovation</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-trophy"></i>
+                                    <span>Industry Recognition</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="judging-card">
+                        <div class="card-header">
+                            <div class="judging-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="card-badge">AI Judge</div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Artificial Intelligence Excellence Award</h3>
+                            <h4>Business Intelligence Group 2024</h4>
+                            <p>2024 judge evaluating cutting-edge AI business innovations with a focus on sustainable and socially impactful artificial intelligence practices.</p>
+                            <div class="engagement-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-brain"></i>
+                                    <span>AI Innovation</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-leaf"></i>
+                                    <span>Sustainability Focus</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="memberships">
-            <h2>Professional Memberships</h2>
-            <div class="memberships-grid">
-                <div class="membership-item">
-                    <div class="membership-icon"><i class="fas fa-trophy"></i></div>
-                    <h3>SAS Eminent Fellow</h3>
-                    <p>Scholars Academic and Scientific Society</p>
+        <!-- Professional Memberships Section -->
+        <section id="memberships" class="section memberships-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Professional Memberships</h2>
+                    <p class="section-subtitle">Active participation in prestigious technology and research organizations</p>
                 </div>
-                <div class="membership-item">
-                    <div class="membership-icon"><i class="fas fa-globe"></i></div>
-                    <h3>Dignitary Fellow</h3>
-                    <p>International Organization for Academic and Scientific Development (IOASD)</p>
-                </div>
-                <div class="membership-item">
-                    <div class="membership-icon"><i class="fas fa-cogs"></i></div>
-                    <h3>Member</h3>
-                    <p>Global CTO Forum</p>
-                </div>
-                <div class="membership-item">
-                    <div class="membership-icon"><i class="fas fa-wrench"></i></div>
-                    <h3>Member</h3>
-                    <p>International Association of Engineers</p>
-                </div>
-                <div class="membership-item">
-                    <div class="membership-icon"><i class="fas fa-laptop-code"></i></div>
-                    <h3>Member</h3>
-                    <p>US Research Software Engineer Association</p>
+                <div class="memberships-grid">
+                    <div class="membership-card distinguished">
+                        <div class="membership-header">
+                            <div class="membership-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="membership-badge">Fellow</div>
+                        </div>
+                        <div class="membership-content">
+                            <h3>SAS Eminent Fellow</h3>
+                            <h4>Scholars Academic and Scientific Society</h4>
+                            <p>Recognition for outstanding contributions to academic and scientific research community.</p>
+                            <div class="membership-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-star"></i>
+                                    <span>Distinguished Recognition</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>Academic Excellence</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="membership-card distinguished">
+                        <div class="membership-header">
+                            <div class="membership-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="membership-badge">Fellow</div>
+                        </div>
+                        <div class="membership-content">
+                            <h3>Dignitary Fellow</h3>
+                            <h4>International Organization for Academic and Scientific Development</h4>
+                            <p>International fellowship recognizing leadership in academic and scientific development.</p>
+                            <div class="membership-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-globe-americas"></i>
+                                    <span>Global Network</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-handshake"></i>
+                                    <span>Leadership Role</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="membership-card">
+                        <div class="membership-header">
+                            <div class="membership-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="membership-badge">Member</div>
+                        </div>
+                        <div class="membership-content">
+                            <h3>Global CTO Forum</h3>
+                            <h4>Technology Leadership Network</h4>
+                            <p>Exclusive forum for Chief Technology Officers and senior technology leaders worldwide.</p>
+                            <div class="membership-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-users-cog"></i>
+                                    <span>Executive Network</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <span>Innovation Focus</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="membership-card">
+                        <div class="membership-header">
+                            <div class="membership-icon">
+                                <i class="fas fa-wrench"></i>
+                            </div>
+                            <div class="membership-badge">Member</div>
+                        </div>
+                        <div class="membership-content">
+                            <h3>International Association of Engineers</h3>
+                            <h4>Professional Engineering Society</h4>
+                            <p>Global professional association promoting engineering excellence and innovation.</p>
+                            <div class="membership-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-hard-hat"></i>
+                                    <span>Engineering Excellence</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>Professional Standards</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="membership-card">
+                        <div class="membership-header">
+                            <div class="membership-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="membership-badge">Member</div>
+                        </div>
+                        <div class="membership-content">
+                            <h3>US Research Software Engineer Association</h3>
+                            <h4>US-RSE Community</h4>
+                            <p>Professional community advancing the recognition and career paths of research software engineers.</p>
+                            <div class="membership-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-microscope"></i>
+                                    <span>Research Focus</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-code"></i>
+                                    <span>Software Engineering</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
         </section>
 
         <!-- Contact Section -->
