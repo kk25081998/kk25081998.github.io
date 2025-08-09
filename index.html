@@ -1322,21 +1322,25 @@
         const cursorDot = document.getElementById('cursor-dot');
         const cursorOutline = document.getElementById('cursor-outline');
 
+        let mouseX = 0, mouseY = 0;
+        let outlineX = 0, outlineY = 0;
+        const outlineSpeed = 0.2;
+
         document.addEventListener('mousemove', (e) => {
-            const posX = e.clientX;
-            const posY = e.clientY;
-            
-            cursorDot.style.left = `${posX}px`;
-            cursorDot.style.top = `${posY}px`;
-            
-            cursorOutline.style.left = `${posX}px`;
-            cursorOutline.style.top = `${posY}px`;
-            
-            cursorOutline.animate({
-                left: `${posX}px`,
-                top: `${posY}px`
-            }, { duration: 500, fill: "forwards" });
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            cursorDot.style.left = `${mouseX}px`;
+            cursorDot.style.top = `${mouseY}px`;
         });
+
+        function animateCursorOutline() {
+            outlineX += (mouseX - outlineX) * outlineSpeed;
+            outlineY += (mouseY - outlineY) * outlineSpeed;
+            cursorOutline.style.left = `${outlineX}px`;
+            cursorOutline.style.top = `${outlineY}px`;
+            requestAnimationFrame(animateCursorOutline);
+        }
+        animateCursorOutline();
 
         // Mobile navigation
         const hamburger = document.querySelector('.hamburger');
