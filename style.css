@@ -2213,6 +2213,13 @@ section[id] {
     .interests-grid {
         grid-template-columns: 1fr;
     }
+
+    /* Icon sits left while text centers on phones: stack and center both */
+    .interest-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
     
     .contact-content {
         grid-template-columns: 1fr;
