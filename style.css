@@ -129,10 +129,21 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-@media (min-width: 769px) {
+html,
+body {
+    overflow-x: clip;
+}
+
+@supports not (overflow: clip) {
+    html,
     body {
         overflow-x: hidden;
     }
+}
+
+img,
+svg {
+    max-width: 100%;
 }
 
 /* Custom Scrollbar */
@@ -292,10 +303,11 @@ body {
 @media (max-width: 768px) {
     .nav-menu {
         position: fixed;
-        top: 70px;
+        top: 100%;
         left: -100%;
         width: 100%;
-        height: 100vh;
+        height: calc(100vh - 100%);
+        height: calc(100dvh - 100%);
         flex-direction: column;
         background: var(--bg-secondary);
         justify-content: flex-start;
@@ -1072,6 +1084,38 @@ body {
 
 .achievement-text strong {
     color: var(--text-primary);
+}
+
+/* In-body links + wrapping guards (prevents overflow on narrow screens) */
+.achievement-text,
+.publication-description {
+    overflow-wrap: break-word;
+}
+
+.achievement-text a,
+.publication-description a,
+.publication-link {
+    overflow-wrap: anywhere;
+}
+
+.achievement-text a {
+    color: var(--primary-color);
+    font-weight: var(--font-weight-medium);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.achievement-text a:hover {
+    color: var(--primary-light);
+}
+
+.hero-content > *,
+.timeline-content,
+.experience-card,
+.publication-category-card,
+.education-card,
+.judging-card {
+    min-width: 0;
 }
 
 .tech-stack {
@@ -2077,13 +2121,10 @@ body {
         flex-direction: column;
         text-align: center;
     }
-    
-    .footer-bottom-left,
-    .footer-bottom-right {
+
+    .footer-bottom-left {
         width: 100%;
-        height: 100vh;
-        z-index: -2;
-        opacity: 0.6;
+    }
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -2283,7 +2324,13 @@ body {
     }
     
     .nav-menu {
-        display: none;
+        gap: var(--space-6);
+        text-align: center;
+        overflow-y: auto;
+    }
+
+    .nav-menu .nav-link {
+        font-size: var(--font-size-lg);
     }
     
     /* Hero Section */
@@ -2493,5 +2540,4 @@ textarea:focus {
     .section {
         page-break-inside: avoid;
     }
-}
 }
