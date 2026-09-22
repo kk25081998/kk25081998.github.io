@@ -2376,6 +2376,18 @@ section[id] {
         padding: var(--space-3) var(--space-6);
         font-size: var(--font-size-sm);
     }
+
+    /* Seven social icons must fit a ~360px row */
+    .footer .social-links {
+        gap: var(--space-3);
+        flex-wrap: wrap;
+    }
+
+    .footer .social-link {
+        width: 44px;
+        height: 44px;
+        font-size: var(--font-size-lg);
+    }
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
