@@ -1397,8 +1397,10 @@
     </footer>
 
     <script>
-        // Register GSAP plugins
-        gsap.registerPlugin(ScrollTrigger);
+        // Register GSAP plugins (guarded: core interactions must work if the CDN is blocked)
+        if (window.gsap && window.ScrollTrigger) {
+            gsap.registerPlugin(ScrollTrigger);
+        }
 
         // Custom cursor
         const cursorDot = document.getElementById('cursor-dot');
@@ -1541,53 +1543,61 @@
             skillObserver.observe(bar);
         });
 
-        // GSAP animations
-        gsap.from('.hero-name', {
-            duration: 1.2,
-            y: 100,
-            opacity: 0,
-            ease: 'power3.out',
-            delay: 0.5
-        });
+        // GSAP entrance animations (progressive enhancement only)
+        if (window.gsap) {
+            gsap.from('.hero-name', {
+                duration: 1.2,
+                y: 100,
+                opacity: 0,
+                ease: 'power3.out',
+                delay: 0.5
+            });
 
-        gsap.from('.hero-description', {
-            duration: 1,
-            y: 50,
-            opacity: 0,
-            ease: 'power2.out',
-            delay: 1
-        });
-
-        gsap.from('.hero-buttons .btn', {
-            duration: 0.8,
-            y: 30,
-            opacity: 0,
-            stagger: 0.2,
-            ease: 'power2.out',
-            delay: 1.3
-        });
-
-        gsap.from('.profile-card', {
-            duration: 1.5,
-            scale: 0.8,
-            opacity: 0,
-            ease: 'elastic.out(1, 0.5)',
-            delay: 0.8
-        });
-
-        // Scroll triggered animations
-        gsap.utils.toArray('.section').forEach(section => {
-            gsap.from(section.querySelector('.section-title'), {
-                scrollTrigger: {
-                    trigger: section,
-                    start: 'top 80%'
-                },
+            gsap.from('.hero-description', {
                 duration: 1,
                 y: 50,
                 opacity: 0,
-                ease: 'power2.out'
+                ease: 'power2.out',
+                delay: 1
             });
-        });
+
+            gsap.from('.hero-buttons .btn', {
+                duration: 0.8,
+                y: 30,
+                opacity: 0,
+                stagger: 0.2,
+                ease: 'power2.out',
+                delay: 1.3
+            });
+
+            gsap.from('.profile-card', {
+                duration: 1.5,
+                scale: 0.8,
+                opacity: 0,
+                ease: 'elastic.out(1, 0.5)',
+                delay: 0.8
+            });
+
+            // Scroll triggered animations
+            if (window.ScrollTrigger) {
+                gsap.utils.toArray('.section').forEach(section => {
+                    const title = section.querySelector('.section-title');
+                    if (!title) {
+                        return;
+                    }
+                    gsap.from(title, {
+                        scrollTrigger: {
+                            trigger: section,
+                            start: 'top 80%'
+                        },
+                        duration: 1,
+                        y: 50,
+                        opacity: 0,
+                        ease: 'power2.out'
+                    });
+                });
+            }
+        }
 
         // Handle window resize
         window.addEventListener('resize', () => {
@@ -1612,11 +1622,13 @@
         // Initialize animations on page load
         document.addEventListener('DOMContentLoaded', () => {
             // Add loading animation
-            gsap.from('body', {
-                duration: 0.8,
-                opacity: 0,
-                ease: 'power2.out'
-            });
+            if (window.gsap) {
+                gsap.from('body', {
+                    duration: 0.8,
+                    opacity: 0,
+                    ease: 'power2.out'
+                });
+            }
         });
     </script>
 </body>

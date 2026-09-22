@@ -327,6 +327,7 @@ svg {
 /* ===== HERO SECTION ===== */
 .hero {
     min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     align-items: center;
     position: relative;
@@ -519,7 +520,9 @@ svg {
     margin: 8px;
 }
 
-.profile-card:hover .profile-overlay {
+.profile-card:hover .profile-overlay,
+.profile-card:active .profile-overlay,
+.profile-card:focus-within .profile-overlay {
     opacity: 1;
 }
 
@@ -574,6 +577,13 @@ svg {
     60% { transform: translateY(-5px); }
 }
 
+/* Hide the scroll cue on short viewports so it never covers hero buttons */
+@media (max-height: 700px) {
+    .scroll-indicator {
+        display: none;
+    }
+}
+
 /* ===== LAYOUT UTILITIES ===== */
 .main-content {
     position: relative;
@@ -583,6 +593,11 @@ svg {
 .section {
     padding: var(--space-20) 0;
     position: relative;
+}
+
+/* Keep anchored section headers clear of the fixed navbar */
+section[id] {
+    scroll-margin-top: 84px;
 }
 
 .container {
@@ -874,17 +889,20 @@ svg {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: var(--space-4);
 }
 
 .skill-name {
     font-size: var(--font-size-base);
     font-weight: var(--font-weight-medium);
     color: var(--text-primary);
+    min-width: 0;
 }
 
 .skill-level {
     flex: 1;
     max-width: 120px;
+    min-width: 64px;
     height: 6px;
     background: var(--bg-secondary);
     border-radius: var(--border-radius-full);
@@ -1220,7 +1238,7 @@ svg {
 
 .coursework-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
     gap: var(--space-4);
 }
 
@@ -1591,7 +1609,7 @@ svg {
 
 .judging-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
     gap: var(--space-8);
 }
 
