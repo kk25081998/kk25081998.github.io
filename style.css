@@ -2142,6 +2142,7 @@ section[id] {
 
     .footer-bottom-left {
         width: 100%;
+        text-align: center;
     }
 }
 
@@ -2224,7 +2225,28 @@ section[id] {
     
     .company-info {
         flex-direction: column;
+        align-items: center;
         text-align: center;
+    }
+
+    /* Stack skill rows on narrow screens: full-width bar under the name */
+    .skill-item {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--space-2);
+    }
+
+    .skill-level {
+        flex: none;
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        margin-left: 0;
+    }
+
+    .duration,
+    .education-date {
+        justify-content: center;
     }
     
     .card-header {
@@ -2355,6 +2377,11 @@ section[id] {
     .hero {
         padding: var(--space-20) 0 var(--space-16);
         text-align: center;
+    }
+
+    /* Absolute-positioned cue overlaps stacked hero content on phones */
+    .scroll-indicator {
+        display: none;
     }
     
     .hero-content h1 {
