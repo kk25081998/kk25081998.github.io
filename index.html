@@ -1,57 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Kartik Khosa – Software Engineer, Microsoft Core AI</title>
+    <meta name="description"
+        content="Kartik Khosa, Software Engineer at Microsoft Core AI in Bellevue, WA, building agentic AI for .NET modernization (GitHub Copilot). Published bioinformatics researcher, open-source author and industry judge.">
+    <meta name="keywords"
+        content="Kartik Khosa, Microsoft, Core AI, Software Engineer, Agentic AI, LLM, C#, .NET, GitHub Copilot, Bioinformatics, TAIR, OpenClade, phylogenetics">
+    <meta name="author" content="Kartik Khosa">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#1a4683">
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
     <link rel="icon" href="./favicon.ico">
     <link rel="manifest" href="./site.webmanifest">
-    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#0066cc">
-    <meta name="theme-color" content="#0a0a0a">
-    <title>Kartik Khosa – Software Engineer, Microsoft Core AI</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap"
-        rel="stylesheet">
-    <meta name="description"
-        content="Kartik Khosa, Software Engineer at Microsoft Core AI in Bellevue, WA, building agentic AI for .NET modernization (GitHub Copilot). Published bioinformatics researcher and industry judge.">
-    <meta name="keywords"
-        content="Kartik Khosa, Microsoft, Core AI, Software Engineer, Agentic AI, LLM, C#, .NET, GitHub Copilot, Full Stack Engineer, Java, Python, JavaScript, React, AWS">
-    <meta name="author" content="Kartik Khosa">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#1a4683">
+    <meta property="og:title" content="Kartik Khosa">
+    <meta property="og:description" content="Software engineer at Microsoft Core AI. Published bioinformatics researcher and author of OpenClade.">
+    <meta property="og:image" content="https://kartikkhosa.com/Kartik.jpg">
+    <meta property="og:url" content="https://kartikkhosa.com/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+    <link rel="stylesheet" href="style.css">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Kartik Khosa",
         "url": "https://kartikkhosa.com/",
+        "image": "https://kartikkhosa.com/Kartik.jpg",
         "jobTitle": "Software Engineer",
-        "worksFor": {
-            "@type": "Organization",
-            "name": "Microsoft"
-        },
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Bellevue",
-            "addressRegion": "WA",
-            "addressCountry": "US"
-        },
+        "worksFor": { "@type": "Organization", "name": "Microsoft" },
+        "address": { "@type": "PostalAddress", "addressLocality": "Bellevue", "addressRegion": "WA", "addressCountry": "US" },
         "alumniOf": [
-            {
-                "@type": "EducationalOrganization",
-                "name": "University of Pennsylvania"
-            },
-            {
-                "@type": "EducationalOrganization",
-                "name": "Pennsylvania State University"
-            }
+            { "@type": "EducationalOrganization", "name": "University of Pennsylvania" },
+            { "@type": "EducationalOrganization", "name": "Pennsylvania State University" }
         ],
-        "knowsAbout": ["Agentic AI", "Large Language Models", "C#", ".NET", "GitHub Copilot", "Bioinformatics", "Full Stack Development"],
+        "knowsAbout": ["Agentic AI", "Large Language Models", "C#", ".NET", "GitHub Copilot", "Bioinformatics", "Phylogenetics", "Full Stack Development"],
         "sameAs": [
             "https://www.linkedin.com/in/kartikkhosa/",
             "https://github.com/kartikphoenix/",
@@ -65,1755 +54,435 @@
 </head>
 
 <body>
-    <div id="cursor-dot"></div>
-    <div id="cursor-outline"></div>
+    <a class="skip" href="#experience">Skip to content</a>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">KK</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#publications" class="nav-link">Publications</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+    <nav class="nav" aria-label="Sections">
+        <div class="nav-inner">
+            <a href="#top" class="nav-name">Kartik Khosa</a>
+            <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#press">Press</a></li>
+                <li><a href="#judging">Judging</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <div class="hero-greeting">
-                        <span class="greeting-icon">👋</span>
-                        <span>Hello, I'm</span>
-                    </div>
-                    <h1 class="hero-name">
-                        <span class="name-first">Kartik</span>
-                        <span class="name-last">Khosa</span>
-                    </h1>
-                    <div class="hero-title">
-                        <span class="typing-text"></span>
-                        <span class="cursor-blink">|</span>
-                    </div>
-                    <p class="hero-description">
-                        Software Engineer at Microsoft Core AI, building agentic AI workflows that modernize
-                        .NET at enterprise scale.
-                        Published researcher, industry judge, and technology enthusiast building the future one
-                        line of code at a time.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#experience" class="btn btn-primary">
-                            <i class="fas fa-briefcase"></i>
-                            View My Work
-                        </a>
-                        <a href="#contact" class="btn btn-secondary">
-                            <i class="fas fa-paper-plane"></i>
-                            Get In Touch
-                        </a>
-                    </div>
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">6+</div>
-                            <div class="stat-label">Years Experience</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">25+</div>
-                            <div class="stat-label">Projects Completed</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">1M+</div>
-                            <div class="stat-label">Users Impacted</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="profile-card">
-                        <img src="./Kartik.jpg" alt="Kartik Khosa - Full Stack Engineer" class="profile-img">
-                        <div class="profile-overlay">
-                            <div class="social-links">
-                                <a href="https://www.linkedin.com/in/kartikkhosa/" rel="noopener" target="_blank"
-                                    aria-label="LinkedIn">
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                                <a href="https://github.com/kartikphoenix/" rel="noopener" target="_blank" aria-label="GitHub">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://scholar.google.com/citations?user=elk_4psAAAAJ&hl=en" rel="noopener" target="_blank" aria-label="Google Scholar">
-                                    <i class="fas fa-graduation-cap"></i>
-                                </a>
-                                <a href="https://leetcode.com/u/kk25081998/" rel="noopener" target="_blank" aria-label="LeetCode">
-                                    <i class="fas fa-code"></i>
-                                </a>
-                                <a href="mailto:kartik.khosa@gmail.com" aria-label="Email">
-                                    <i class="fas fa-envelope"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <header class="hero" id="top">
+        <div class="hero-inner">
+            <div class="hero-text">
+                <img class="portrait" src="./Kartik.jpg" alt="Portrait of Kartik Khosa" width="96" height="96">
+                <h1>Kartik Khosa</h1>
+                <p class="lead">
+                    I’m a software engineer at Microsoft Core AI, where I build the agentic workflows that
+                    automate .NET migrations in GitHub Copilot. Before that I spent three and a half years
+                    modernizing The Arabidopsis Information Resource and MorphoBank, and I still build open-source
+                    tools for evolutionary biology.
+                </p>
+                <p class="hero-links">
+                    <a class="button" href="mailto:kartik.khosa@gmail.com">Email me</a>
+                    <a href="https://www.linkedin.com/in/kartikkhosa/" rel="noopener" target="_blank">LinkedIn</a>
+                    <a href="https://scholar.google.com/citations?user=elk_4psAAAAJ&hl=en" rel="noopener" target="_blank">Google Scholar</a>
+                    <a href="https://github.com/kartikphoenix/" rel="noopener" target="_blank">GitHub</a>
+                </p>
             </div>
-            <div class="scroll-indicator">
-                <span class="scroll-text">Scroll to explore</span>
-                <div class="scroll-arrow">
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-            </div>
+
+            <figure class="clado-figure">
+                <ul class="clado" aria-label="Career milestones, grouped as a cladogram">
+                    <li><span class="stem"></span>
+                        <ul>
+                            <li><span class="stem"></span>
+                                <ul>
+                                    <li><span class="stem"></span>
+                                        <ul class="group" data-group="Education">
+                                            <li class="tip"><span class="stem"></span><a href="#education"><b>2019</b><span>B.S., Penn State</span></a></li>
+                                            <li class="tip"><span class="stem"></span><a href="#education"><b>2024</b><span>Master’s, Penn</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li><span class="stem"></span>
+                                        <ul class="group" data-group="Engineering">
+                                            <li class="tip"><span class="stem"></span><a href="#experience"><b>2020</b><span>Appian</span></a></li>
+                                            <li><span class="stem"></span>
+                                                <ul>
+                                                    <li class="tip"><span class="stem"></span><a href="#experience"><b>2022</b><span>Phoenix Bioinformatics</span></a></li>
+                                                    <li class="tip"><span class="stem"></span><a href="#experience"><b>2026</b><span>Microsoft Core AI</span></a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><span class="stem"></span>
+                                <ul>
+                                    <li><span class="stem"></span>
+                                        <ul class="group" data-group="Research">
+                                            <li><span class="stem"></span>
+                                                <ul>
+                                                    <li class="tip"><span class="stem"></span><a href="#research"><b>2024</b><span>Paper in <i>Genetics</i></span></a></li>
+                                                    <li class="tip"><span class="stem"></span><a href="#research"><b>2024</b><span>Talk at ISMB</span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li><span class="stem"></span>
+                                                <ul>
+                                                    <li class="tip"><span class="stem"></span><a href="#research"><b>2026</b><span>Paper in <i>Genetics</i></span></a></li>
+                                                    <li class="tip"><span class="stem"></span><a href="#projects"><b>2026</b><span>OpenClade</span></a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><span class="stem"></span>
+                                        <ul class="group" data-group="Recognition">
+                                            <li class="tip"><span class="stem"></span><a href="#judging"><b>2023</b><span>Judge, 6 programs</span></a></li>
+                                            <li><span class="stem"></span>
+                                                <ul>
+                                                    <li class="tip"><span class="stem"></span><a href="#press"><b>2026</b><span>Quoted in Forbes</span></a></li>
+                                                    <li class="tip"><span class="stem"></span><a href="#experience"><b>2026</b><span>Gartner MQ Leader</span></a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <figcaption>My career as a cladogram, drawn the way <a href="/projects/openclade/">OpenClade</a> draws trees.</figcaption>
+            </figure>
         </div>
     </header>
 
-    <!-- Highlights Strip -->
-    <section class="highlights" aria-label="Career highlights">
-        <div class="container">
-            <div class="highlights-grid">
-                <a href="#experience" class="highlight-card">
-                    <i class="fas fa-building"></i>
-                    <div>
-                        <strong>Microsoft Core AI</strong>
-                        <span>Software Engineer, Redmond</span>
+    <main>
+        <section class="block" id="experience" aria-labelledby="h-experience">
+            <h2 id="h-experience">Experience</h2>
+            <ol class="record">
+                <li class="entry">
+                    <p class="when">Apr 2026 – now <span class="current">Current</span></p>
+                    <div class="what">
+                        <h3>Software engineer, Microsoft Core AI</h3>
+                        <p class="where">Redmond, Washington</p>
+                        <ul class="points">
+                            <li><strong>Agentic .NET migration engine.</strong> Engineered hybrid C# agentic workflows
+                                powering the official <a href="https://learn.microsoft.com/en-us/dotnet/core/porting/github-copilot-upgrade/overview" rel="noopener" target="_blank">GitHub Copilot app</a>,
+                                orchestrating Roslyn static code analysis and LLM synthesis across a three-stage engine
+                                (assessment, planning, execution) to automate end-to-end .NET Framework migrations,
+                                reducing manual effort by 90%.</li>
+                            <li><strong>Enterprise modernization at scale.</strong> Partnered with .NET experts to build
+                                modular upgrade plugins, accelerating multi-year first-party .NET Core migrations, saving
+                                years of developer effort and on track to eliminate millions of continuous CPU cores.</li>
+                            <li><strong>Autonomous bug triage agent.</strong> Developed an autonomous bug triage agent
+                                for Azure Storage Explorer using a stateful directed graph loop: GitHub issue ingestion,
+                                reproduction script synthesis, defect localization, unit test generation and pull request
+                                delivery with root-cause provenance. It resolved 85% of issues.</li>
+                            <li><strong>Industry leadership.</strong> This work contributes to Microsoft’s position as a
+                                Leader in the <a href="https://www.gartner.com/doc/reprints?id=00ThR000008k1rGUAQ&ct=260804&st=sb" rel="noopener" target="_blank">Gartner
+                                Magic Quadrant for AI-Augmented Code Modernization Tools</a> (August 2026).</li>
+                        </ul>
+                        <p class="tools">C#, .NET, Roslyn, GitHub Copilot, agentic AI, LLMs, Azure</p>
                     </div>
-                </a>
-                <a href="https://www.forbes.com/sites/joemckendrick/2026/07/09/how-technical-the-debate-about-ais-future-jobs/"
-                    rel="noopener" target="_blank" class="highlight-card">
-                    <i class="fas fa-quote-left"></i>
-                    <div>
-                        <strong>Quoted in Forbes</strong>
-                        <span>On AI's future jobs, 2026</span>
+                </li>
+                <li class="entry">
+                    <p class="when">Oct 2022 – Apr 2026</p>
+                    <div class="what">
+                        <h3>Full stack software engineer, Phoenix Bioinformatics</h3>
+                        <p class="where">The Arabidopsis Information Resource (TAIR) and MorphoBank</p>
+                        <ul class="points">
+                            <li><strong>Search architecture.</strong> Architected a Spring Boot pipeline replacing SQL
+                                queries with S3 JSON data indexed in Solr, cutting search times from 60 seconds to 300
+                                milliseconds.</li>
+                            <li><strong>AI summaries.</strong> Led development of a LangGraph agent architecture that
+                                generates bioinformatics summaries for more than 50,000 locus pages, with section-based
+                                summarization, combination, validation and evaluation layers, powered by Gemini 2.5 Flash.</li>
+                            <li><strong>Automation.</strong> Automated reporting workflows with Spring Boot APIs, dynamic
+                                data aggregation and AWS SES, saving business teams more than 1,000 hours a year.</li>
+                            <li><strong>DevOps.</strong> Built a Docker-based CI/CD platform (Jenkins and GitHub
+                                Actions), speeding up releases and greatly reducing rollbacks.</li>
+                            <li><strong>Microservices.</strong> Designed RESTful Node.js microservices to modernize the
+                                Arabidopsis.org backend.</li>
+                            <li><strong>Research.</strong> Co-authored peer-reviewed papers in <i>Genetics</i> and
+                                presented at ISMB 2024 on scalable bioinformatics architecture.</li>
+                        </ul>
+                        <p class="tools">Java, Spring Boot, Vue.js, React, Node.js, AWS, S3, Solr, MySQL, Docker, Jenkins, Supabase, OpenAI</p>
                     </div>
-                </a>
-                <a href="https://www.gartner.com/doc/reprints?id=00ThR000008k1rGUAQ&ct=260804&st=sb"
-                    rel="noopener" target="_blank" class="highlight-card">
-                    <i class="fas fa-trophy"></i>
-                    <div>
-                        <strong>Gartner MQ Leader</strong>
-                        <span>AI code modernization</span>
+                </li>
+                <li class="entry">
+                    <p class="when">Feb 2020 – Oct 2022</p>
+                    <div class="what">
+                        <h3>Solution engineer, Appian Corporation</h3>
+                        <ul class="points">
+                            <li><strong>Security and scale.</strong> Managed authentication protocols (SAML, OAuth,
+                                LDAP) for more than 100 businesses serving over 100,000 users.</li>
+                            <li><strong>Code quality.</strong> Assessed and optimized more than 25 custom Java plugins
+                                against company standards.</li>
+                            <li><strong>Documentation.</strong> Wrote internal documentation that cut resolution times
+                                by 80% across more than 10 customer cases.</li>
+                            <li><strong>Client success.</strong> Achieved a 95% “very satisfied” rating from clients
+                                through technical consultation.</li>
+                        </ul>
+                        <p class="tools">Java, SAML, OAuth, LDAP, Git, technical consulting</p>
                     </div>
-                </a>
-                <a href="https://academic.oup.com/genetics/article/227/1/iyae027/7624473?login=false"
-                    rel="noopener" target="_blank" class="highlight-card">
-                    <i class="fas fa-dna"></i>
-                    <div>
-                        <strong>Published in Genetics</strong>
-                        <span>Oxford University Press</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
+                </li>
+            </ol>
+        </section>
 
-    <main class="main-content">
-        <!-- About Section -->
-        <section id="about" class="section about-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">About Me</h2>
-                    <p class="section-subtitle">Get to know the person behind the code</p>
-                </div>
-                <div class="about-content">
-                    <div class="about-text">
-                        <div class="about-intro">
-                            <p class="intro-text">
-                                Hey there! I'm Kartik, a Software Engineer at Microsoft Core AI in Bellevue, WA,
-                                with a passion for technology and
-                                adventure.
-                                When I'm not crafting code or solving complex problems, you'll find me pursuing a
-                                variety of exciting interests:
-                            </p>
-                        </div>
-                        <div class="interests-grid">
-                            <div class="interest-item">
-                                <div class="interest-icon">
-                                    <i class="fas fa-flag-checkered"></i>
-                                </div>
-                                <div class="interest-content">
-                                    <h4>Formula 1 Enthusiast</h4>
-                                    <p>Never miss a race weekend!</p>
-                                </div>
-                            </div>
-                            <div class="interest-item">
-                                <div class="interest-icon">
-                                    <i class="fas fa-parachute-box"></i>
-                                </div>
-                                <div class="interest-content">
-                                    <h4>Adrenaline Junkie</h4>
-                                    <p>Skydiving and scuba diving adventures</p>
-                                </div>
-                            </div>
-                            <div class="interest-item">
-                                <div class="interest-icon">
-                                    <i class="fas fa-gamepad"></i>
-                                </div>
-                                <div class="interest-content">
-                                    <h4>Competitive Gamer</h4>
-                                    <p>Sharpening skills in Valorant</p>
-                                </div>
-                            </div>
-                            <div class="interest-item">
-                                <div class="interest-icon">
-                                    <i class="fas fa-utensils"></i>
-                                </div>
-                                <div class="interest-content">
-                                    <h4>Foodie Adventurer</h4>
-                                    <p>Always hunting for new culinary experiences</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="about-philosophy">
-                            <blockquote>
-                                "I believe in bringing the same enthusiasm and curiosity I have for my hobbies into my
-                                professional life.
-                                Whether I'm optimizing systems, enhancing user interfaces, or delivering innovative
-                                solutions,
-                                I approach each challenge with excitement and a drive to excel."
-                            </blockquote>
-                        </div>
+        <section class="block" id="research" aria-labelledby="h-research">
+            <h2 id="h-research">Research</h2>
+            <ol class="record">
+                <li class="entry">
+                    <p class="when">2026</p>
+                    <div class="what">
+                        <h3><a href="https://academic.oup.com/genetics/advance-article/doi/10.1093/genetics/iyaf248/8369148" rel="noopener" target="_blank">Recent major changes to TAIR: updates to the database, website, and Arabidopsis genome</a></h3>
+                        <p class="where"><i>Genetics</i>, Oxford University Press</p>
+                        <p>Database enhancements, website improvements and genome annotation updates to The Arabidopsis
+                            Information Resource.</p>
                     </div>
-                    <div class="about-visual">
-                        <div class="about-image-container">
-                            <img src="./kartik-about.jpg" alt="Kartik enjoying an adventure" class="about-img"
-                                loading="lazy" decoding="async">
-                            <div class="image-decoration">
-                                <div class="decoration-circle"></div>
-                                <div class="decoration-square"></div>
-                            </div>
-                        </div>
-                        <div class="quick-facts">
-                            <h4>Quick Facts</h4>
-                            <div class="fact-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>Based in Bellevue, WA, USA</span>
-                            </div>
-                            <div class="fact-item">
-                                <i class="fas fa-graduation-cap"></i>
-                                <span>UPenn MCIT Graduate</span>
-                            </div>
-                            <div class="fact-item">
-                                <i class="fas fa-coffee"></i>
-                                <span>Coffee-powered Developer</span>
-                            </div>
-                            <div class="fact-item">
-                                <i class="fas fa-heart"></i>
-                                <span>Open Source Contributor</span>
-                            </div>
-                        </div>
+                </li>
+                <li class="entry">
+                    <p class="when">2024</p>
+                    <div class="what">
+                        <h3><a href="https://academic.oup.com/genetics/article/227/1/iyae027/7624473?login=false" rel="noopener" target="_blank">The Arabidopsis Information Resource in 2024</a></h3>
+                        <p class="where"><i>Genetics</i>, Oxford University Press</p>
+                        <p>Our work modernizing TAIR to make it more accessible and useful for the global plant research
+                            community.</p>
+                        <p class="note">Top 25% of research outputs; 87th percentile for its age, 84th overall.</p>
                     </div>
+                </li>
+                <li class="entry">
+                    <p class="when">2024</p>
+                    <div class="what">
+                        <h3><a href="https://www.iscb.org/ismb2024/programme-schedule/scientific-programme/bioinfo-core" rel="noopener" target="_blank">Building a future-proof digital resource: the comprehensive modernization of TAIR</a></h3>
+                        <p class="where">Talk at ISMB 2024</p>
+                        <p>Presented at ISMB, the largest international conference in bioinformatics and computational
+                            biology.</p>
+                    </div>
+                </li>
+                <li class="entry">
+                    <p class="when" aria-hidden="true"></p>
+                    <div class="what">
+                        <h3><a href="https://hackernoon.com/u/kartikkhosa" rel="noopener" target="_blank">Unlocking endless possibilities with GPT-4</a></h3>
+                        <p class="where">HackerNoon</p>
+                        <p>From study plans to building several applications with GPT-4. Trended at #4 for more than two
+                            weeks.</p>
+                    </div>
+                </li>
+                <li class="entry">
+                    <p class="when">2019</p>
+                    <div class="what">
+                        <h3><a href="https://honors.libraries.psu.edu/files/final_submissions/6102" rel="noopener" target="_blank">Framework for uncertainty quantification of a chemical kinetic parameter in MOCVD</a></h3>
+                        <p class="where">Honors thesis, Penn State</p>
+                        <p>Improved simulation efficiency by 85% using orthogonal sampling and stepwise regression, and
+                            determined yield ranges of nanomaterials through sensitivity analysis and Monte Carlo
+                            simulation.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="block" id="projects" aria-labelledby="h-projects">
+            <h2 id="h-projects">Projects</h2>
+            <ol class="record">
+                <li class="entry">
+                    <p class="when">2026</p>
+                    <div class="what">
+                        <h3><a href="/projects/openclade/">OpenClade</a></h3>
+                        <p class="where">Phylogenetic analysis of morphological data in the browser</p>
+                        <p>Parsimony analysis of morphological character matrices that runs entirely in the browser, with
+                            no installation and no data upload. It reads NEXUS and TNT files, including MorphoBank
+                            exports, handles inapplicable characters with the Brazeau, Guillerme and Smith (2019)
+                            algorithm, and produces most parsimonious trees, consensus trees, bootstrap support,
+                            character mapping and a methods paragraph.</p>
+                        <p class="note">Validated on 31 published matrices. Found the exact optimum in 124 of 124
+                            exhaustive tests.</p>
+                        <p><a class="button button-quiet" href="/projects/openclade/">Open OpenClade</a></p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="block" id="press" aria-labelledby="h-press">
+            <h2 id="h-press">Press</h2>
+            <ol class="record">
+                <li class="entry">
+                    <p class="when">2026</p>
+                    <div class="what">
+                        <h3><a href="https://www.forbes.com/sites/joemckendrick/2026/07/09/how-technical-the-debate-about-ais-future-jobs/" rel="noopener" target="_blank">How technical? The debate about AI’s future jobs</a></h3>
+                        <p class="where">Forbes, quoted</p>
+                        <p>Quoted as a Microsoft Core AI engineer on forward-deployed versus AI engineers, and on turning
+                            AI capabilities into measurable business value.</p>
+                    </div>
+                </li>
+                <li class="entry">
+                    <p class="when">Jan 2024</p>
+                    <div class="what">
+                        <h3><a href="https://www.freepressjournal.in/tech/kartik-khosa-leading-the-charge-in-modernizing-biological-data-systems" rel="noopener" target="_blank">Leading the charge in modernizing biological data systems</a></h3>
+                        <p class="where">Free Press Journal, feature</p>
+                        <p>On modernizing Arabidopsis.org, including data pipeline work that cut retrieval times from over
+                            two seconds to under 100 milliseconds.</p>
+                    </div>
+                </li>
+                <li class="entry">
+                    <p class="when">Oct 2023</p>
+                    <div class="what">
+                        <h3><a href="https://www.dnaindia.com/technology/report-kartik-khosa-crafting-technological-symphonies-from-eastern-roots-to-global-impact-3063356" rel="noopener" target="_blank">Technology leadership profile</a></h3>
+                        <p class="where">DNA India, feature</p>
+                        <p>A profile of my path and contributions in technology.</p>
+                    </div>
+                </li>
+
+                <li class="entry">
+                    <p class="when" aria-hidden="true"></p>
+                    <div class="what">
+                        <h3><a href="https://cybernews.com/editorial/running-ai-directly-on-device-isnt-worth-your-money/" rel="noopener" target="_blank">Running AI on device</a></h3>
+                        <p class="where">Cybernews, quoted</p>
+                        <p>Expert comment on how effective small AI models are on consumer devices.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="block" id="judging" aria-labelledby="h-judging">
+            <h2 id="h-judging">Judging and review</h2>
+            <ol class="record">
+                <li class="entry">
+                    <p class="when">2025</p>
+                    <div class="what">
+                        <h3>Reviewer, BOSC 2025</h3>
+                        <p class="where">Bioinformatics Open Source Conference, ISMB 2025</p>
+                        <p>Technical review of submissions on open-source bioinformatics tools and computational methods.</p>
+                    </div>
+                </li>
+                <li class="entry">
+                    <p class="when">2024</p>
+                    <div class="what">
+                        <h3>Reviewer, BOSC 2024</h3>
+                        <p class="where">Bioinformatics Open Source Conference, ISMB 2024</p>
+                        <p>Technical review focused on open-source bioinformatics tools and AI/ML approaches.</p>
+                    </div>
+                </li>
+                <li class="entry">
+                    <p class="when">2024</p>
+                    <div class="what">
+                        <h3>Judge, SIIA CODiE Awards</h3>
+                        <p class="where">Education technology categories</p>
+                        <p>Assessed innovation and impact in educational software products.</p>
+                    </div>
+                </li>
+                <li class="entry">
+                    <p class="when">2024</p>
+                    <div class="what">
+                        <h3>Judge, Artificial Intelligence Excellence Awards</h3>
+                        <p class="where">Business Intelligence Group</p>
+                        <p>Evaluated AI business innovations, with a focus on sustainable and socially beneficial practice.</p>
+                    </div>
+                </li>
+                <li class="entry">
+                    <p class="when">2023</p>
+                    <div class="what">
+                        <h3>Lead judge, Information Technology World Awards</h3>
+                        <p class="where">Globee Awards, 18th annual</p>
+                        <p>Reviewed more than 100 submissions from technology leaders and products worldwide.</p>
+                    </div>
+                </li>
+                <li class="entry">
+                    <p class="when" aria-hidden="true"></p>
+                    <div class="what">
+                        <h3>Committee member, Community and Travel Grants</h3>
+                        <p class="where">US Research Software Engineer Association</p>
+                        <p>Reviewed grant applications that support diversity, inclusion and community in research
+                            software engineering.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="block" id="education" aria-labelledby="h-education">
+            <h2 id="h-education">Education</h2>
+            <ol class="record">
+                <li class="entry">
+                    <p class="when">May 2024</p>
+                    <div class="what">
+                        <h3>Master’s in Computer and Information Technology</h3>
+                        <p class="where">University of Pennsylvania</p>
+                        <p>Coursework in big data analytics, machine learning, databases, blockchain and cryptography,
+                            computer systems programming, algorithms, and data structures and software design.</p>
+                    </div>
+                </li>
+                <li class="entry">
+                    <p class="when">Dec 2019</p>
+                    <div class="what">
+                        <h3>Honors B.S. in Mechanical Engineering, magna cum laude</h3>
+                        <p class="where">Pennsylvania State University</p>
+                        <p>Honors thesis on uncertainty quantification in metal-organic chemical vapor deposition (listed
+                            under Research).</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="block" id="skills" aria-labelledby="h-skills">
+            <h2 id="h-skills">Skills</h2>
+            <dl class="skills">
+                <div><dt>AI and machine learning</dt><dd>Agentic AI (LangGraph, GitHub Copilot), LLM synthesis and prompt engineering, OpenAI and Gemini APIs, PyTorch, TensorFlow and Keras, scikit-learn, NLTK</dd></div>
+                <div><dt>Backend</dt><dd>C# (.NET, Roslyn), Java (Spring Boot), Python (Django, Flask, FastAPI), Node.js, C++, REST APIs, microservices</dd></div>
+                <div><dt>Frontend</dt><dd>JavaScript, Vue.js, React, Next.js, HTML and CSS, Tailwind CSS, Bootstrap</dd></div>
+                <div><dt>Data</dt><dd>MySQL, MongoDB, Redis, Solr, Supabase, Amazon RDS and S3, PySpark, Databricks, data mesh architecture</dd></div>
+                <div><dt>DevOps and cloud</dt><dd>AWS (EC2, Lambda, SES), Azure, Docker, Kubernetes, Jenkins, GitHub Actions, CI/CD, Bash</dd></div>
+            </dl>
+        </section>
+
+        <section class="block" id="about" aria-labelledby="h-about">
+            <h2 id="h-about">About</h2>
+            <div class="about">
+                <div class="about-text">
+                    <p>I live in Bellevue, Washington. Outside work I never miss a Formula 1 race weekend, I go skydiving
+                        and scuba diving when I can, I play Valorant competitively, and I’m always looking for a new place
+                        to eat.</p>
+                    <p>I try to bring the same curiosity I have for those things to my work, whether I’m optimizing a
+                        system, improving an interface or building something new.</p>
                 </div>
+                <img class="about-img" src="./kartik-about.jpg" alt="Illustration of Kartik at a café table with a coffee and a phone"
+                    width="768" height="1152" loading="lazy" decoding="async">
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="section skills-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Technical Expertise</h2>
-                    <p class="section-subtitle">Technologies and tools I work with</p>
-                </div>
-                <div class="skills-container">
-                    <div class="skill-category" data-category="frontend">
-                        <div class="category-header">
-                            <div class="skill-icon">
-                                <i class="fas fa-laptop-code"></i>
-                            </div>
-                            <h3>Frontend Development</h3>
-                        </div>
-                        <div class="skills-list">
-                            <div class="skill-item">
-                                <span class="skill-name">JavaScript</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="95"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Vue.js</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="90"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">React</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="85"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Next.js</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="80"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">HTML5/CSS3</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="95"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Tailwind CSS</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="85"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Bootstrap</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="90"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-category" data-category="backend">
-                        <div class="category-header">
-                            <div class="skill-icon">
-                                <i class="fas fa-server"></i>
-                            </div>
-                            <h3>Backend Development</h3>
-                        </div>
-                        <div class="skills-list">
-                            <div class="skill-item">
-                                <span class="skill-name">Java (Spring Boot)</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="95"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">C# (.NET, Roslyn)</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="90"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Python (Django/Flask/FastAPI)</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="90"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Node.js</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="85"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">RESTful APIs</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="90"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Microservices</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="80"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">C++</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="75"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-category" data-category="database">
-                        <div class="category-header">
-                            <div class="skill-icon">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <h3>Database & Storage</h3>
-                        </div>
-                        <div class="skills-list">
-                            <div class="skill-item">
-                                <span class="skill-name">MySQL</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="90"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">MongoDB</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="85"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Amazon RDS</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="85"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">AWS S3</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="85"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Supabase</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="80"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Solr</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="75"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Redis</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="75"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-category" data-category="devops">
-                        <div class="category-header">
-                            <div class="skill-icon">
-                                <i class="fas fa-cloud"></i>
-                            </div>
-                            <h3>DevOps & Cloud</h3>
-                        </div>
-                        <div class="skills-list">
-                            <div class="skill-item">
-                                <span class="skill-name">AWS (EC2, RDS, SES, Lambda)</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="90"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Docker & Kubernetes</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="85"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Jenkins</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="85"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">GitHub Actions</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="90"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Git/GitHub/GitLab</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="95"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Bash Scripting</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="85"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">CI/CD Pipelines</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="80"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-category" data-category="data-engineering">
-                        <div class="category-header">
-                            <div class="skill-icon">
-                                <i class="fas fa-chart-bar"></i>
-                            </div>
-                            <h3>Data Engineering</h3>
-                        </div>
-                        <div class="skills-list">
-                            <div class="skill-item">
-                                <span class="skill-name">PySpark</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="85"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">AWS Databricks</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="80"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Data Warehouses</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="80"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Data Mesh Architecture</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="75"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">SQL & NoSQL</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="90"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-category" data-category="machine-learning">
-                        <div class="category-header">
-                            <div class="skill-icon">
-                                <i class="fas fa-brain"></i>
-                            </div>
-                            <h3>Machine Learning & AI</h3>
-                        </div>
-                        <div class="skills-list">
-                            <div class="skill-item">
-                                <span class="skill-name">Agentic AI (LangGraph, GitHub Copilot)</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="90"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">LLM Synthesis & Prompt Engineering</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="90"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Scikit-learn</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="85"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">TensorFlow & Keras</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="80"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">PyTorch</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="75"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">LLM APIs (OpenAI, Gemini)</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="85"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">NLTK & NLP</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="80"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Data Visualization</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="75"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <section class="block contact" id="contact" aria-labelledby="h-contact">
+            <h2 id="h-contact">Contact</h2>
+            <div class="contact-body">
+                <p>I’m happy to talk about agentic AI, .NET modernization and research collaboration. Email is the
+                    fastest way to reach me.</p>
+                <p class="email"><a href="mailto:kartik.khosa@gmail.com">kartik.khosa@gmail.com</a></p>
+                <ul class="elsewhere">
+                    <li><a href="https://www.linkedin.com/in/kartikkhosa/" rel="noopener" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://scholar.google.com/citations?user=elk_4psAAAAJ&hl=en" rel="noopener" target="_blank">Google Scholar</a></li>
+                    <li><a href="https://github.com/kartikphoenix/" rel="noopener" target="_blank">GitHub</a></li>
+                    <li><a href="https://leetcode.com/u/kk25081998/" rel="noopener" target="_blank">LeetCode</a></li>
+                    <li><a href="https://x.com/kartikkhosa" rel="noopener" target="_blank">X</a></li>
+                    <li><a href="https://www.instagram.com/kartikkhosa/" rel="noopener" target="_blank">Instagram</a></li>
+                </ul>
             </div>
         </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="section experience-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Professional Journey</h2>
-                    <p class="section-subtitle">Building impactful solutions across industries</p>
-                </div>
-                <div class="timeline">
-                    <div class="timeline-item active">
-                        <div class="timeline-marker">
-                            <div class="timeline-dot"></div>
-                        </div>
-                        <div class="timeline-content">
-                            <div class="experience-card">
-                                <div class="card-header">
-                                    <div class="company-info">
-                                        <div class="company-logo">
-                                            <img src="./microsoft-logo.svg" alt="Microsoft"
-                                                loading="lazy">
-                                        </div>
-                                        <div class="position-details">
-                                            <h3>Software Engineer</h3>
-                                            <h4>Microsoft – Core AI, Redmond, WA, US</h4>
-                                            <div class="duration">
-                                                <i class="fas fa-calendar-alt"></i>
-                                                <span>April 2026 – Present</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="status-badge current">Current Position</div>
-                                </div>
-                                <div class="achievements">
-                                    <div class="achievement-item">
-                                        <div class="achievement-icon">
-                                            <i class="fas fa-robot"></i>
-                                        </div>
-                                        <div class="achievement-text">
-                                            <strong>Agentic .NET Migration Engine:</strong> Engineered hybrid C#
-                                            agentic workflows powering the official
-                                            <a href="https://learn.microsoft.com/en-us/dotnet/core/porting/github-copilot-upgrade/overview"
-                                                rel="noopener" target="_blank">GitHub Copilot App</a>, orchestrating
-                                            Roslyn AST static code analysis and LLM synthesis across a 3-stage engine
-                                            (Assessment, Planning, Execution) to automate end-to-end .NET Framework
-                                            migrations, reducing manual effort by 90%.
-                                        </div>
-                                    </div>
-                                    <div class="achievement-item">
-                                        <div class="achievement-icon">
-                                            <i class="fas fa-code-branch"></i>
-                                        </div>
-                                        <div class="achievement-text">
-                                            <strong>Enterprise Modernization at Scale:</strong> Partnered with .NET
-                                            experts to build modular upgrade plugins, accelerating multi-year 1P .NET
-                                            Core migrations, saving years of dev effort and on track to eliminate
-                                            millions of continuous CPU cores.
-                                        </div>
-                                    </div>
-                                    <div class="achievement-item">
-                                        <div class="achievement-icon">
-                                            <i class="fas fa-bug"></i>
-                                        </div>
-                                        <div class="achievement-text">
-                                            <strong>Autonomous Bug Triage Agent:</strong> Developed an autonomous Bug
-                                            Triage agent for Azure Storage Explorer using a stateful directed graph
-                                            loop, automating GitHub issue ingestion, dynamic reproduction script
-                                            synthesis, codebase defect localization, synthetic unit test generation,
-                                            and pull request delivery with complete root-cause provenance that solved
-                                            85% of issues.
-                                        </div>
-                                    </div>
-                                    <div class="achievement-item">
-                                        <div class="achievement-icon">
-                                            <i class="fas fa-trophy"></i>
-                                        </div>
-                                        <div class="achievement-text">
-                                            <strong>Industry Leadership:</strong> Work contributes to Microsoft's
-                                            position as a Leader in the
-                                            <a href="https://www.gartner.com/doc/reprints?id=00ThR000008k1rGUAQ&ct=260804&st=sb"
-                                                rel="noopener" target="_blank">Gartner Magic Quadrant for AI-Augmented Code
-                                                Modernization Tools (Aug 2026)</a>,
-                                            staying ahead as AI-augmented modernization moves mainstream.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tech-stack">
-                                    <span class="tech-tag">C#</span>
-                                    <span class="tech-tag">.NET</span>
-                                    <span class="tech-tag">Roslyn</span>
-                                    <span class="tech-tag">GitHub Copilot</span>
-                                    <span class="tech-tag">Agentic AI</span>
-                                    <span class="tech-tag">LLMs</span>
-                                    <span class="tech-tag">Azure</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-marker">
-                            <div class="timeline-dot"></div>
-                        </div>
-                        <div class="timeline-content">
-                            <div class="experience-card">
-                                <div class="card-header">
-                                    <div class="company-info">
-                                        <div class="company-logo">
-                                            <img src="./phoenix-logo-300sm.png" alt="Phoenix Bioinformatics"
-                                                loading="lazy">
-                                        </div>
-                                        <div class="position-details">
-                                            <h3>Full Stack Software Engineer</h3>
-                                            <h4>Phoenix Bioinformatics</h4>
-                                            <div class="duration">
-                                                <i class="fas fa-calendar-alt"></i>
-                                                <span>October 2022 – April 2026</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="status-badge previous">3.5 Years</div>
-                                </div>
-                                <div class="achievements">
-                                    <div class="achievement-item">
-                                        <div class="achievement-icon">
-                                            <i class="fas fa-rocket"></i>
-                                        </div>
-                                        <div class="achievement-text">
-                                            <strong>High-Performance Architecture:</strong> Architected a Spring Boot
-                                            pipeline replacing SQL queries with S3 JSON data indexed in Solr,
-                                            significantly reducing search times from 60s to 300ms.
-                                        </div>
-                                    </div>
-                                    <div class="achievement-item">
-                                        <div class="achievement-icon">
-                                            <i class="fas fa-cogs"></i>
-                                        </div>
-                                        <div class="achievement-text">
-                                            <strong>Automation Excellence:</strong> Automated reporting workflows using
-                                            SpringBoot APIs with dynamic data aggregation and AWS SES integration,
-                                            saving 1,000+ hours annually for business teams
-                                        </div>
-                                    </div>
-                                    <div class="achievement-item">
-                                        <div class="achievement-icon">
-                                            <i class="fas fa-cloud"></i>
-                                        </div>
-                                        <div class="achievement-text">
-                                            <strong>DevOps Innovation:</strong> Implemented automated Docker-based CI/CD
-                                            platform (Jenkins + GitHub Actions), significantly accelerating release
-                                            cycles and greatly reducing rollbacks
-                                        </div>
-                                    </div>
-                                    <div class="achievement-item">
-                                        <div class="achievement-icon">
-                                            <i class="fas fa-microchip"></i>
-                                        </div>
-                                        <div class="achievement-text">
-                                            <strong>Microservices Architecture:</strong> Designed and engineered
-                                            microservices architecture with RESTful APIs in Node.js to modernize
-                                            Arabidopsis.org backend, improving application flexibility and seamless
-                                            integration
-                                        </div>
-                                    </div>
-                                    <div class="achievement-item">
-                                        <div class="achievement-icon">
-                                            <i class="fas fa-robot"></i>
-                                        </div>
-                                        <div class="achievement-text">
-                                            <strong>AI Innovation:</strong> Led development of advanced LangGraph agent
-                                            architecture to generate intelligent bioinformatics summaries for 50k+
-                                            unique locus detail pages, empowering new scientists and researchers with
-                                            accessible insights. Engineered multi-node pipeline featuring section-based
-                                            summarization, intelligent combination, validation, and evaluation layers,
-                                            powered by Gemini 2.5 Flash in Python
-                                        </div>
-                                    </div>
-                                    <div class="achievement-item">
-                                        <div class="achievement-icon">
-                                            <i class="fas fa-book"></i>
-                                        </div>
-                                        <div class="achievement-text">
-                                            <strong>Research Leadership:</strong> Contributed to peer-reviewed research
-                                            in Genetics Journal and presented at ISMB 2024 on scalable bioinformatics
-                                            architectures, demonstrating thought leadership in the field
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tech-stack">
-                                    <span class="tech-tag">Java</span>
-                                    <span class="tech-tag">SpringBoot</span>
-                                    <span class="tech-tag">Vue.js</span>
-                                    <span class="tech-tag">React</span>
-                                    <span class="tech-tag">Node.js</span>
-                                    <span class="tech-tag">AWS</span>
-                                    <span class="tech-tag">S3</span>
-                                    <span class="tech-tag">Solr</span>
-                                    <span class="tech-tag">MySQL</span>
-                                    <span class="tech-tag">Docker</span>
-                                    <span class="tech-tag">Jenkins</span>
-                                    <span class="tech-tag">Supabase</span>
-                                    <span class="tech-tag">OpenAI</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-marker">
-                            <div class="timeline-dot"></div>
-                        </div>
-                        <div class="timeline-content">
-                            <div class="experience-card">
-                                <div class="card-header">
-                                    <div class="company-info">
-                                        <div class="company-logo appian-logo">
-                                            <img src="./logo-appian-white-rebrand.svg" alt="Appian Corporation"
-                                                loading="lazy">
-                                        </div>
-                                        <div class="position-details">
-                                            <h3>Solution Engineer</h3>
-                                            <h4>Appian Corporation</h4>
-                                            <div class="duration">
-                                                <i class="fas fa-calendar-alt"></i>
-                                                <span>February 2020 – October 2022</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="status-badge previous">2.8 Years</div>
-                                </div>
-                                <div class="achievements">
-                                    <div class="achievement-item">
-                                        <div class="achievement-icon">
-                                            <i class="fas fa-shield-alt"></i>
-                                        </div>
-                                        <div class="achievement-text">
-                                            <strong>Security & Scale:</strong> Managed authentication protocols (SAML,
-                                            OAuth, LDAP) for 100+ businesses serving 100K+ users
-                                        </div>
-                                    </div>
-                                    <div class="achievement-item">
-                                        <div class="achievement-icon">
-                                            <i class="fas fa-code"></i>
-                                        </div>
-                                        <div class="achievement-text">
-                                            <strong>Code Quality:</strong> Assessed and optimized 25+ custom Java
-                                            plugins, ensuring alignment with company standards
-                                        </div>
-                                    </div>
-                                    <div class="achievement-item">
-                                        <div class="achievement-icon">
-                                            <i class="fas fa-book-open"></i>
-                                        </div>
-                                        <div class="achievement-text">
-                                            <strong>Documentation Leadership:</strong> Created internal documentation
-                                            that reduced resolution times by 80% across 10+ customer cases
-                                        </div>
-                                    </div>
-                                    <div class="achievement-item">
-                                        <div class="achievement-icon">
-                                            <i class="fas fa-handshake"></i>
-                                        </div>
-                                        <div class="achievement-text">
-                                            <strong>Client Success:</strong> Achieved 95% "Very Satisfied" rate from
-                                            clients through technical consultation
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tech-stack">
-                                    <span class="tech-tag">Java</span>
-                                    <span class="tech-tag">SAML</span>
-                                    <span class="tech-tag">OAuth</span>
-                                    <span class="tech-tag">LDAP</span>
-                                    <span class="tech-tag">Git</span>
-                                    <span class="tech-tag">Technical Consulting</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education" class="section education-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Education</h2>
-                    <p class="section-subtitle">Academic foundation that drives my technical excellence</p>
-                </div>
-                <div class="education-grid">
-                    <div class="education-card">
-                        <div class="education-header">
-                            <div class="education-logo">
-                                <img src="./upenn.png" alt="University of Pennsylvania" loading="lazy">
-                            </div>
-                            <div class="education-info">
-                                <h3>University of Pennsylvania</h3>
-                                <h4>Master's in Computer and Information Technology</h4>
-                                <div class="education-date">
-                                    <i class="fas fa-graduation-cap"></i>
-                                    <span>May 2024</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="education-details">
-                            <h4>Key Coursework</h4>
-                            <div class="coursework-grid">
-                                <div class="coursework-group">
-                                    <div class="coursework-icon">
-                                        <i class="fas fa-chart-line"></i>
-                                    </div>
-                                    <h5>Data & Analytics</h5>
-                                    <ul>
-                                        <li>Big Data Analytics</li>
-                                        <li>Machine Learning</li>
-                                        <li>Databases</li>
-                                    </ul>
-                                </div>
-                                <div class="coursework-group">
-                                    <div class="coursework-icon">
-                                        <i class="fas fa-shield-alt"></i>
-                                    </div>
-                                    <h5>Systems & Security</h5>
-                                    <ul>
-                                        <li>Blockchain and Cryptography</li>
-                                        <li>Computer Systems Programming</li>
-                                    </ul>
-                                </div>
-                                <div class="coursework-group">
-                                    <div class="coursework-icon">
-                                        <i class="fas fa-code"></i>
-                                    </div>
-                                    <h5>Algorithms & Design</h5>
-                                    <ul>
-                                        <li>Algorithms and Computation</li>
-                                        <li>Data Structures and Software Design</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="education-card">
-                        <div class="education-header">
-                            <div class="education-logo">
-                                <img src="./psu.jpeg" alt="Pennsylvania State University" loading="lazy">
-                            </div>
-                            <div class="education-info">
-                                <h3>Pennsylvania State University</h3>
-                                <h4>Honors B.S. in Mechanical Engineering, magna cum laude</h4>
-                                <div class="education-date">
-                                    <i class="fas fa-graduation-cap"></i>
-                                    <span>December 2019</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="education-details">
-                            <h4>Thesis Research</h4>
-                            <div class="thesis-info">
-                                <h5>Framework for Uncertainty Quantification of a Chemical Kinetic Parameter in MOCVDS
-                                </h5>
-                                <div class="achievements">
-                                    <div class="achievement-item">
-                                        <div class="achievement-icon">
-                                            <i class="fas fa-tachometer-alt"></i>
-                                        </div>
-                                        <span>Optimized simulation efficiency by 85% using orthogonal sampling and
-                                            stepwise regression in MATLAB</span>
-                                    </div>
-                                    <div class="achievement-item">
-                                        <div class="achievement-icon">
-                                            <i class="fas fa-atom"></i>
-                                        </div>
-                                        <span>Determined accurate yield ranges of nanomaterial via sensitivity analysis
-                                            and Monte Carlo simulations</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Publications Section -->
-        <section id="projects" class="section publications-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Projects</h2>
-                    <p class="section-subtitle">Open-source research software I build and maintain</p>
-                </div>
-                <div class="publications-grid">
-                    <div class="publication-category-card">
-                        <div class="category-header">
-                            <div class="category-icon">
-                                <i class="fas fa-diagram-project"></i>
-                            </div>
-                            <h3>Research Software</h3>
-                        </div>
-                        <div class="publication-items">
-                            <div class="publication-item">
-                                <div class="publication-header">
-                                    <h4>OpenClade: Phylogenetic Analysis of Morphological Data in the Browser</h4>
-                                    <div class="publication-meta">
-                                        <span class="journal">JavaScript · Web Workers</span>
-                                        <span class="year">2026</span>
-                                    </div>
-                                </div>
-                                <p class="publication-description">
-                                    Parsimony analysis of morphological character matrices that runs entirely in the
-                                    browser, with no installation and no data upload. It reads NEXUS and TNT files
-                                    (including MorphoBank exports), handles inapplicable characters with the
-                                    Brazeau, Guillerme &amp; Smith (2019) algorithm, and produces most parsimonious
-                                    trees, consensus trees, bootstrap support, character mapping and a methods
-                                    paragraph.
-                                </p>
-                                <div class="impact-metrics">
-                                    <div class="metric-item">
-                                        <i class="fas fa-vial-circle-check"></i>
-                                        <span>Validated on 31 published matrices</span>
-                                    </div>
-                                    <div class="metric-item">
-                                        <i class="fas fa-bullseye"></i>
-                                        <span>Exact optimum in 124/124 exhaustive tests</span>
-                                    </div>
-                                    <div class="metric-item">
-                                        <i class="fas fa-lock"></i>
-                                        <span>Runs locally on your computer</span>
-                                    </div>
-                                </div>
-                                <div class="publication-actions">
-                                    <a href="/projects/openclade/" class="publication-link">
-                                        <i class="fas fa-play"></i>
-                                        Launch OpenClade
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="publications" class="section publications-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Publications & Contributions</h2>
-                    <p class="section-subtitle">Research contributions and thought leadership in technology</p>
-                </div>
-                <div class="publications-grid">
-                    <div class="publication-category-card">
-                        <div class="category-header">
-                            <div class="category-icon">
-                                <i class="fas fa-journal-whills"></i>
-                            </div>
-                            <h3>Peer-Reviewed Articles</h3>
-                        </div>
-                        <div class="publication-items">
-                            <div class="publication-item">
-                                <div class="publication-header">
-                                    <h4>The Arabidopsis Information Resource in 2024</h4>
-                                    <div class="publication-meta">
-                                        <span class="journal">Genetics, Oxford University Press</span>
-                                        <span class="year">2024</span>
-                                    </div>
-                                </div>
-                                <p class="publication-description">
-                                    Detailing our efforts to modernize the Arabidopsis resource, enhancing accessibility
-                                    and utility for the global research community.
-                                </p>
-                                <div class="impact-metrics">
-                                    <div class="metric-item">
-                                        <i class="fas fa-chart-line"></i>
-                                        <span>Top 25% Research Outputs</span>
-                                    </div>
-                                    <div class="metric-item">
-                                        <i class="fas fa-percentage"></i>
-                                        <span>87th Percentile for Age</span>
-                                    </div>
-                                    <div class="metric-item">
-                                        <i class="fas fa-bullseye"></i>
-                                        <span>84th Percentile Overall</span>
-                                    </div>
-                                </div>
-                                <div class="publication-actions">
-                                    <a href="https://academic.oup.com/genetics/article/227/1/iyae027/7624473?login=false"
-                                        rel="noopener" target="_blank" class="publication-link">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        Read Article
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="publication-item">
-                                <div class="publication-header">
-                                    <h4>Recent major changes to TAIR: updates to the database, website, and Arabidopsis
-                                        genome</h4>
-                                    <div class="publication-meta">
-                                        <span class="journal">Genetics, Oxford University Press</span>
-                                        <span class="year">2026</span>
-                                    </div>
-                                </div>
-                                <p class="publication-description">
-                                    Comprehensive updates to The Arabidopsis Information Resource, including database
-                                    enhancements, website improvements, and genome annotation updates.
-                                </p>
-                                <div class="publication-actions">
-                                    <a href="https://academic.oup.com/genetics/advance-article/doi/10.1093/genetics/iyaf248/8369148"
-                                        rel="noopener" target="_blank" class="publication-link">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        Read Article
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="publication-category-card">
-                        <div class="category-header">
-                            <div class="category-icon">
-                                <i class="fas fa-chalkboard-teacher"></i>
-                            </div>
-                            <h3>Conference Presentations</h3>
-                        </div>
-                        <div class="publication-items">
-                            <div class="publication-item">
-                                <div class="publication-header">
-                                    <h4>Building a Future-Proof Digital Resource: The Comprehensive Modernization of
-                                        TAIR</h4>
-                                    <div class="publication-meta">
-                                        <span class="conference">ISMB 2024</span>
-                                        <span class="year">2024</span>
-                                    </div>
-                                </div>
-                                <p class="publication-description">
-                                    Presented at the largest and most influential conference in bioinformatics and
-                                    computational biology.
-                                </p>
-                                <div class="conference-info">
-                                    <div class="info-item">
-                                        <i class="fas fa-users"></i>
-                                        <span>International Audience</span>
-                                    </div>
-                                    <div class="info-item">
-                                        <i class="fas fa-globe"></i>
-                                        <span>Global Impact</span>
-                                    </div>
-                                </div>
-                                <div class="publication-actions">
-                                    <a href="https://www.iscb.org/ismb2024/programme-schedule/scientific-programme/bioinfo-core"
-                                        rel="noopener" target="_blank" class="publication-link">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        More Details
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="publication-category-card">
-                        <div class="category-header">
-                            <div class="category-icon">
-                                <i class="fas fa-pen-fancy"></i>
-                            </div>
-                            <h3>Article Publications</h3>
-                        </div>
-                        <div class="publication-items">
-                            <div class="publication-item">
-                                <div class="publication-header">
-                                    <h4>Unlocking Endless Possibilities with GPT-4</h4>
-                                    <div class="publication-meta">
-                                        <span class="platform">HackerNoon</span>
-                                        <span class="trending">Trending #4</span>
-                                    </div>
-                                </div>
-                                <p class="publication-description">
-                                    My journey from study plans to building multiple applications with GPT-4. Trended
-                                    for 2+ weeks.
-                                </p>
-                                <div class="publication-actions">
-                                    <a href="https://hackernoon.com/u/kartikkhosa" rel="noopener" target="_blank"
-                                        class="publication-link">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        View Profile
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="publication-item">
-                                <div class="publication-header">
-                                    <h4>Framework for Uncertainty Quantification in MOCVDS</h4>
-                                    <div class="publication-meta">
-                                        <span class="type">Undergraduate Research</span>
-                                        <span class="institution">Penn State</span>
-                                    </div>
-                                </div>
-                                <p class="publication-description">
-                                    Developed framework for uncertainty quantification of chemical kinetic parameters in
-                                    MOCVDS processes.
-                                </p>
-                                <div class="publication-actions">
-                                    <a href="https://honors.libraries.psu.edu/files/final_submissions/6102"
-                                        rel="noopener" target="_blank" class="publication-link">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        View Research
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="publication-category-card">
-                        <div class="category-header">
-                            <div class="category-icon">
-                                <i class="fas fa-newspaper"></i>
-                            </div>
-                            <h3>Press Coverage</h3>
-                        </div>
-                        <div class="publication-items">
-                            <div class="publication-item">
-                                <div class="publication-header">
-                                    <h4>Running AI on Device: Expert Analysis</h4>
-                                    <div class="publication-meta">
-                                        <span class="source">Cybernews</span>
-                                        <span class="type">Expert Quote</span>
-                                    </div>
-                                </div>
-                                <p class="publication-description">
-                                    Featured expert insights on the effectiveness of small AI models on consumer
-                                    devices.
-                                </p>
-                                <div class="publication-actions">
-                                    <a href="https://cybernews.com/editorial/running-ai-directly-on-device-isnt-worth-your-money/"
-                                        rel="noopener" target="_blank" class="publication-link">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        Read Article
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="publication-item">
-                                <div class="publication-header">
-                                    <h4>Technology Leadership Profile</h4>
-                                    <div class="publication-meta">
-                                        <span class="source">DNA India</span>
-                                        <span class="type">Feature Article</span>
-                                    </div>
-                                </div>
-                                <p class="publication-description">
-                                    Profile highlighting journey and contributions in technology innovation.
-                                </p>
-                                <div class="publication-actions">
-                                    <a href="https://www.dnaindia.com/technology/report-kartik-khosa-crafting-technological-symphonies-from-eastern-roots-to-global-impact-3063356"
-                                        rel="noopener" target="_blank" class="publication-link">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        Read Article
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="publication-item">
-                                <div class="publication-header">
-                                    <h4>Leading The Charge In Modernizing Biological Data Systems</h4>
-                                    <div class="publication-meta">
-                                        <span class="source">Free Press Journal</span>
-                                        <span class="type">Feature Article</span>
-                                    </div>
-                                </div>
-                                <p class="publication-description">
-                                    Feature article highlighting work on modernizing Arabidopsis.org, including data
-                                    pipeline innovations that reduced retrieval times from over two seconds to under 100
-                                    milliseconds.
-                                </p>
-                                <div class="publication-actions">
-                                    <a href="https://www.freepressjournal.in/tech/kartik-khosa-leading-the-charge-in-modernizing-biological-data-systems"
-                                        rel="noopener" target="_blank" class="publication-link">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        Read Article
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="publication-item">
-                                <div class="publication-header">
-                                    <h4>How Technical? The Debate About AI's Future Jobs</h4>
-                                    <div class="publication-meta">
-                                        <span class="source">Forbes</span>
-                                        <span class="type">Expert Quote</span>
-                                        <span class="year">2026</span>
-                                    </div>
-                                </div>
-                                <p class="publication-description">
-                                    Quoted as a Microsoft Core AI software engineer on forward-deployed vs AI
-                                    engineers, translating AI capabilities into measurable business value.
-                                </p>
-                                <div class="publication-actions">
-                                    <a href="https://www.forbes.com/sites/joemckendrick/2026/07/09/how-technical-the-debate-about-ais-future-jobs/"
-                                        rel="noopener" target="_blank" class="publication-link">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        Read Article
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Judging & Committee Section -->
-        <section id="judging" class="section judging-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Judging & Committee Engagements</h2>
-                    <p class="section-subtitle">Evaluating innovation and excellence across technology sectors</p>
-                </div>
-                <div class="judging-grid">
-                    <div class="judging-card featured">
-                        <div class="card-header">
-                            <div class="judging-icon">
-                                <i class="fas fa-award"></i>
-                            </div>
-                            <div class="card-badge">Lead Judge</div>
-                        </div>
-                        <div class="card-content">
-                            <h3>Information Technology World Awards</h3>
-                            <h4>Globee Awards</h4>
-                            <p>Lead judge for the 18th Annual 2023 Information Technology World Awards, evaluating
-                                global technology leaders and innovative solutions.</p>
-                            <div class="engagement-details">
-                                <div class="detail-item">
-                                    <i class="fas fa-users"></i>
-                                    <span>100+ Submissions Reviewed</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-globe"></i>
-                                    <span>Global Technology Focus</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="judging-card">
-                        <div class="card-header">
-                            <div class="judging-icon">
-                                <i class="fas fa-dna"></i>
-                            </div>
-                            <div class="card-badge">Reviewer</div>
-                        </div>
-                        <div class="card-content">
-                            <h3>BOSC 2024</h3>
-                            <h4>ISMB 2024 Conference</h4>
-                            <p>Technical reviewer for the Bioinformatics Open Source Conference, focusing on open source
-                                bioinformatics tools and AI/ML approaches.</p>
-                            <div class="engagement-details">
-                                <div class="detail-item">
-                                    <i class="fas fa-microscope"></i>
-                                    <span>Bioinformatics Focus</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-code-branch"></i>
-                                    <span>Open Source</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="judging-card">
-                        <div class="card-header">
-                            <div class="judging-icon">
-                                <i class="fas fa-microscope"></i>
-                            </div>
-                            <div class="card-badge">Reviewer</div>
-                        </div>
-                        <div class="card-content">
-                            <h3>BOSC 2025</h3>
-                            <h4>ISMB 2025 Conference</h4>
-                            <p>Technical reviewer for the Bioinformatics Open Source Conference, continuing focus on
-                                open source bioinformatics tools and computational approaches.</p>
-                            <div class="engagement-details">
-                                <div class="detail-item">
-                                    <i class="fas fa-microscope"></i>
-                                    <span>Bioinformatics Focus</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-code-branch"></i>
-                                    <span>Open Source</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="judging-card">
-                        <div class="card-header">
-                            <div class="judging-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div class="card-badge">Committee Member</div>
-                        </div>
-                        <div class="card-content">
-                            <h3>Community and Travel Grants Committee</h3>
-                            <h4>US Research Software Engineer Association</h4>
-                            <p>Reviewing grant applications to foster diversity, inclusion, and community impact in the
-                                US Research Software Engineer community.</p>
-                            <div class="engagement-details">
-                                <div class="detail-item">
-                                    <i class="fas fa-heart"></i>
-                                    <span>Diversity & Inclusion</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-graduation-cap"></i>
-                                    <span>Research Focus</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="judging-card">
-                        <div class="card-header">
-                            <div class="judging-icon">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <div class="card-badge">Judge</div>
-                        </div>
-                        <div class="card-content">
-                            <h3>Education Technology Categories</h3>
-                            <h4>SIIA CODiE Awards 2024</h4>
-                            <p>2024 judge for Education Technology Categories, assessing innovation and impact in
-                                educational software products and solutions.</p>
-                            <div class="engagement-details">
-                                <div class="detail-item">
-                                    <i class="fas fa-chalkboard-teacher"></i>
-                                    <span>EdTech Innovation</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-trophy"></i>
-                                    <span>Industry Recognition</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="judging-card">
-                        <div class="card-header">
-                            <div class="judging-icon">
-                                <i class="fas fa-robot"></i>
-                            </div>
-                            <div class="card-badge">AI Judge</div>
-                        </div>
-                        <div class="card-content">
-                            <h3>Artificial Intelligence Excellence Award</h3>
-                            <h4>Business Intelligence Group 2024</h4>
-                            <p>2024 judge evaluating cutting-edge AI business innovations with a focus on sustainable
-                                and socially impactful artificial intelligence practices.</p>
-                            <div class="engagement-details">
-                                <div class="detail-item">
-                                    <i class="fas fa-brain"></i>
-                                    <span>AI Innovation</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-leaf"></i>
-                                    <span>Sustainability Focus</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Contact Section -->
-        <section id="contact" class="section contact-cta-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Get In Touch</h2>
-                    <p class="section-subtitle">Open to conversations about agentic AI, .NET modernization, and
-                        research collaboration</p>
-                </div>
-                <div class="contact-cta">
-                    <p class="contact-cta-text">The fastest way to reach me is email — I read everything.</p>
-                    <div class="contact-cta-buttons">
-                        <a href="mailto:kartik.khosa@gmail.com" class="btn btn-primary">
-                            <i class="fas fa-envelope"></i>
-                            kartik.khosa@gmail.com
-                        </a>
-                        <a href="https://www.linkedin.com/in/kartikkhosa/" rel="noopener" target="_blank"
-                            class="btn btn-secondary">
-                            <i class="fab fa-linkedin"></i>
-                            LinkedIn
-                        </a>
-                    </div>
-                    <p class="contact-cta-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Bellevue, WA, USA
-                    </p>
-                </div>
-            </div>
-        </section>
-</main>
+    </main>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <span class="logo-text">Kartik Khosa</span>
-                    </div>
-                    <p class="footer-description">
-                        Software Engineer at Microsoft Core AI, building agentic AI for large-scale
-                        modernization. Based in Bellevue, WA, USA.
-                    </p>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/kartikkhosa/" rel="noopener" target="_blank" aria-label="LinkedIn"
-                            class="social-link">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/kartikphoenix/" rel="noopener" target="_blank" aria-label="GitHub"
-                            class="social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://scholar.google.com/citations?user=elk_4psAAAAJ&hl=en" rel="noopener" target="_blank" aria-label="Google Scholar"
-                            class="social-link">
-                            <i class="fas fa-graduation-cap"></i>
-                        </a>
-                        <a href="https://leetcode.com/u/kk25081998/" rel="noopener" target="_blank" aria-label="LeetCode"
-                            class="social-link">
-                            <i class="fas fa-code"></i>
-                        </a>
-                        <a href="https://x.com/kartikkhosa" rel="noopener" target="_blank" aria-label="X" class="social-link">
-                            <i class="fa-brands fa-x-twitter"></i>
-                        </a>
-                        <a href="https://www.instagram.com/kartikkhosa/" rel="noopener" target="_blank" aria-label="Instagram"
-                            class="social-link">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="mailto:kartik.khosa@gmail.com" aria-label="Email" class="social-link">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <div class="footer-bottom-left">
-                    <p>&copy; 2026 Kartik Khosa. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
+        <p>© 2026 Kartik Khosa. Bellevue, Washington.</p>
     </footer>
 
     <script>
-        // Register GSAP plugins (guarded: core interactions must work if the CDN is blocked)
-        if (window.gsap && window.ScrollTrigger) {
-            gsap.registerPlugin(ScrollTrigger);
-        }
-
-        // Custom cursor
-        const cursorDot = document.getElementById('cursor-dot');
-        const cursorOutline = document.getElementById('cursor-outline');
-
-        let mouseX = 0, mouseY = 0;
-        let outlineX = 0, outlineY = 0;
-        const outlineSpeed = 0.2;
-
-        document.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-            cursorDot.style.left = `${mouseX}px`;
-            cursorDot.style.top = `${mouseY}px`;
-        });
-
-        function animateCursorOutline() {
-            outlineX += (mouseX - outlineX) * outlineSpeed;
-            outlineY += (mouseY - outlineY) * outlineSpeed;
-            cursorOutline.style.left = `${outlineX}px`;
-            cursorOutline.style.top = `${outlineY}px`;
-            requestAnimationFrame(animateCursorOutline);
-        }
-        animateCursorOutline();
-
-        // Mobile navigation
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
-
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        }));
-
-        // Typing animation
-        const typingText = document.querySelector('.typing-text');
-        const phrases = [
-            'Full Stack Engineer',
-            'AI Engineer',
-            'Tech Innovator',
-            'Problem Solver',
-            'Research Contributor',
-            'Industry Judge'
-        ];
-
-        let phraseIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        const typingSpeed = 100;
-        const deletingSpeed = 50;
-        const pauseDuration = 2000;
-
-        function typeWriter() {
-            const currentPhrase = phrases[phraseIndex];
-
-            if (isDeleting) {
-                typingText.textContent = currentPhrase.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                typingText.textContent = currentPhrase.substring(0, charIndex + 1);
-                charIndex++;
-            }
-
-            let typeSpeed = isDeleting ? deletingSpeed : typingSpeed;
-
-            if (!isDeleting && charIndex === currentPhrase.length) {
-                typeSpeed = pauseDuration;
-                isDeleting = true;
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                phraseIndex = (phraseIndex + 1) % phrases.length;
-            }
-
-            setTimeout(typeWriter, typeSpeed);
-        }
-
-        // Start typing animation
-        typeWriter();
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+        (function () {
+            var btn = document.getElementById('navToggle');
+            var links = document.getElementById('navLinks');
+            btn.addEventListener('click', function () {
+                var open = btn.getAttribute('aria-expanded') === 'true';
+                btn.setAttribute('aria-expanded', String(!open));
+                links.classList.toggle('open', !open);
             });
-        });
-
-        // Navbar scroll effect
-        const navbar = document.querySelector('.navbar');
-        let lastScrollTop = 0;
-
-        window.addEventListener('scroll', () => {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-            if (scrollTop > 100) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-
-            // Hide/show navbar on scroll
-            if (scrollTop > lastScrollTop && scrollTop > 500) {
-                navbar.style.transform = 'translateY(-100%)';
-            } else {
-                navbar.style.transform = 'translateY(0)';
-            }
-            lastScrollTop = scrollTop;
-        });
-
-        // Animate skill bars
-        const skillBars = document.querySelectorAll('.skill-bar');
-
-        const observerOptions = {
-            threshold: 0.5,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const skillObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const skillBar = entry.target;
-                    const level = skillBar.getAttribute('data-level');
-                    skillBar.style.width = level + '%';
-                }
+            links.addEventListener('click', function (e) {
+                if (e.target.closest('a')) { btn.setAttribute('aria-expanded', 'false'); links.classList.remove('open'); }
             });
-        }, observerOptions);
-
-        skillBars.forEach(bar => {
-            skillObserver.observe(bar);
-        });
-
-        // GSAP entrance animations (progressive enhancement only)
-        if (window.gsap) {
-            gsap.from('.hero-name', {
-                duration: 1.2,
-                y: 100,
-                opacity: 0,
-                ease: 'power3.out',
-                delay: 0.5
-            });
-
-            gsap.from('.hero-description', {
-                duration: 1,
-                y: 50,
-                opacity: 0,
-                ease: 'power2.out',
-                delay: 1
-            });
-
-            gsap.from('.hero-buttons .btn', {
-                duration: 0.8,
-                y: 30,
-                opacity: 0,
-                stagger: 0.2,
-                ease: 'power2.out',
-                delay: 1.3
-            });
-
-            gsap.from('.profile-card', {
-                duration: 1.5,
-                scale: 0.8,
-                opacity: 0,
-                ease: 'elastic.out(1, 0.5)',
-                delay: 0.8
-            });
-
-            // Scroll triggered animations
-            if (window.ScrollTrigger) {
-                gsap.utils.toArray('.section').forEach(section => {
-                    const title = section.querySelector('.section-title');
-                    if (!title) {
-                        return;
-                    }
-                    gsap.from(title, {
-                        scrollTrigger: {
-                            trigger: section,
-                            start: 'top 80%'
-                        },
-                        duration: 1,
-                        y: 50,
-                        opacity: 0,
-                        ease: 'power2.out'
-                    });
-                });
-            }
-        }
-
-        // Handle window resize
-        window.addEventListener('resize', () => {
-            // Removed Three.js resize handler
-        });
-
-        // Form submission (you can integrate with your backend)
-        const contactForm = document.querySelector('.form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            const formData = new FormData(this);
-
-            // Create mailto link as fallback
-            const subject = encodeURIComponent(formData.get('subject'));
-            const body = encodeURIComponent(`Name: ${formData.get('name')}\nEmail: ${formData.get('email')}\n\nMessage:\n${formData.get('message')}`);
-
-            window.location.href = `mailto:kartik.khosa@gmail.com?subject=${subject}&body=${body}`;
-            });
-        }
-
-        // Initialize animations on page load
-        document.addEventListener('DOMContentLoaded', () => {
-            // Add loading animation
-            if (window.gsap) {
-                gsap.from('body', {
-                    duration: 0.8,
-                    opacity: 0,
-                    ease: 'power2.out'
-                });
-            }
-        });
+        })();
     </script>
 </body>
-
 </html>
